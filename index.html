@@ -44,8 +44,12 @@
         </div>
     </nav>
 
-    <!-- PORTADA / HERO -->
+    <!-- PORTADA HERO -->
     <section id="portada" class="hero">
+        <video autoplay muted loop playsinline class="hero-video">
+            <source src="video/hero.mp4" type="video/mp4">
+            Tu navegador no soporta videos HTML5.
+        </video>
         <div class="hero-overlay"></div>
         <div class="hero-text">
             <h1>Student Club PMI UNC</h1>
@@ -53,6 +57,7 @@
             <p>Comunidad estudiantil dedicada a la gestión de proyectos en la Universidad Nacional de Cajamarca</p>
         </div>
     </section>
+
 
     <!-- VISIÓN Y MISIÓN -->
     <section id="vision-mision" class="eventos">
@@ -590,7 +595,7 @@
 
 
     <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbww4jeqnEjmSUSmYZASO5tzNv4c-O5XsbiiLdIBQyKNbIgASdKlCnjKp7xqpEB-TLzI/exec';
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzwhxwGQSMcUCj1MCVrCsuPICbfQch3A2N3mZkfxc6krkgqUU9PxFiBc0NG702OG4AH/exec';
 
         document.getElementById('contactForm').addEventListener('submit', e => {
             e.preventDefault();
