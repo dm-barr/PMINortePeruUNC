@@ -6,6 +6,7 @@ const track = document.getElementById('carouselTrack');
 const slides = document.querySelectorAll('.carousel-slide');
 const totalSlides = slides.length;
 
+
 // Crear indicadores
 const indicatorsContainer = document.getElementById('carouselIndicators');
 for (let i = 0; i < totalSlides; i++) {
@@ -15,6 +16,7 @@ for (let i = 0; i < totalSlides; i++) {
     indicator.onclick = () => goToSlide(i);
     indicatorsContainer.appendChild(indicator);
 }
+
 
 function moveCarousel(direction) {
     currentSlide += direction;
@@ -28,10 +30,12 @@ function moveCarousel(direction) {
     updateCarousel();
 }
 
+
 function goToSlide(index) {
     currentSlide = index;
     updateCarousel();
 }
+
 
 function updateCarousel() {
     const offset = -currentSlide * 100;
@@ -44,53 +48,6 @@ function updateCarousel() {
     });
 }
 
-// ========================================
-// SMOOTH SCROLL PARA NAVEGACIÓN
-// ========================================
-function initSmoothScroll() {
-    const menuLinks = document.querySelectorAll('.menu a[href^="#"]');
-    
-    menuLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href');
-            const targetSection = document.querySelector(targetId);
-            
-            if (targetSection) {
-                // Cerrar menú móvil si está abierto
-                const menuToggle = document.getElementById('menu-toggle');
-                if (menuToggle) {
-                    menuToggle.checked = false;
-                }
-                
-                // Scroll suave
-                targetSection.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
-        });
-    });
-}
 
-// ========================================
-// CERRAR MENÚ AL HACER CLIC FUERA
-// ========================================
-document.addEventListener('click', function(event) {
-    const menuToggle = document.getElementById('menu-toggle');
-    const menuIcon = document.querySelector('.menu-icon');
-    const menu = document.querySelector('.menu');
-    
-    if (menuToggle && menuToggle.checked) {
-        if (!menu.contains(event.target) && !menuIcon.contains(event.target)) {
-            menuToggle.checked = false;
-        }
-    }
-});
-
-// ========================================
-// INICIALIZAR AL CARGAR LA PÁGINA
-// ========================================
-document.addEventListener('DOMContentLoaded', function() {
-    initSmoothScroll();
-});
+// Auto-avance opcional (cada 5 segundos)
+// setInterval(() => moveCarousel(1), 5000);

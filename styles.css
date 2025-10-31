@@ -1458,18 +1458,18 @@ body {
         height: 40px;
     }
     
-    /* Hero - AJUSTE PARA QUE OCUPE TODA LA PANTALLA INICIALMENTE */
+    /* Hero */
     .hero {
-        height: calc(100vh - 100px);
-        min-height: 500px;
+        height: 60vh;
+        min-height: 350px;
     }
     
     .hero-text h1 {
-        font-size: 1.8em;
+        font-size: 1.6em;
     }
     
     .hero-text p {
-        font-size: 1em;
+        font-size: 0.95em;
     }
     
     /* Quiénes somos */
@@ -1593,16 +1593,16 @@ body {
 @media (max-width: 480px) {
     /* Hero */
     .hero {
-        height: calc(100vh - 90px);
-        min-height: 450px;
+        height: 50vh;
+        min-height: 300px;
     }
     
     .hero-text h1 {
-        font-size: 1.5em;
+        font-size: 1.4em;
     }
     
     .hero-text p {
-        font-size: 0.95em;
+        font-size: 0.9em;
     }
     
     /* Títulos principales */
