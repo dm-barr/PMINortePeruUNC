@@ -45,49 +45,6 @@ function updateCarousel() {
 }
 
 // ========================================
-// MOSTRAR SECCIONES AL HACER SCROLL (MÓVIL)
-// ========================================
-function initMobileScrollBehavior() {
-    // Solo aplicar en dispositivos móviles
-    if (window.innerWidth <= 768) {
-        const sections = document.querySelectorAll('#vision-mision, #ejes, #junta, #eventos, #contacto');
-        const footer = document.querySelector('.footer');
-        let sectionsVisible = false;
-
-        // Detectar scroll
-        window.addEventListener('scroll', function() {
-            const heroHeight = document.querySelector('.hero').offsetHeight;
-            const scrollPosition = window.scrollY;
-
-            // Si el usuario hace scroll más allá del hero, mostrar todas las secciones
-            if (scrollPosition > heroHeight * 0.3 && !sectionsVisible) {
-                sectionsVisible = true;
-                sections.forEach(section => {
-                    section.classList.add('visible');
-                });
-                if (footer) {
-                    footer.classList.add('visible');
-                }
-            }
-        });
-
-        // También mostrar secciones cuando se hace clic en el menú
-        const menuLinks = document.querySelectorAll('.menu a');
-        menuLinks.forEach(link => {
-            link.addEventListener('click', function(e) {
-                sectionsVisible = true;
-                sections.forEach(section => {
-                    section.classList.add('visible');
-                });
-                if (footer) {
-                    footer.classList.add('visible');
-                }
-            });
-        });
-    }
-}
-
-// ========================================
 // SMOOTH SCROLL PARA NAVEGACIÓN
 // ========================================
 function initSmoothScroll() {
@@ -117,24 +74,6 @@ function initSmoothScroll() {
 }
 
 // ========================================
-// INICIALIZAR AL CARGAR LA PÁGINA
-// ========================================
-document.addEventListener('DOMContentLoaded', function() {
-    initMobileScrollBehavior();
-    initSmoothScroll();
-    
-    // Recalcular al cambiar tamaño de ventana
-    let resizeTimer;
-    window.addEventListener('resize', function() {
-        clearTimeout(resizeTimer);
-        resizeTimer = setTimeout(function() {
-            // Recargar página si cambia de móvil a desktop o viceversa
-            location.reload();
-        }, 250);
-    });
-});
-
-// ========================================
 // CERRAR MENÚ AL HACER CLIC FUERA
 // ========================================
 document.addEventListener('click', function(event) {
@@ -147,4 +86,11 @@ document.addEventListener('click', function(event) {
             menuToggle.checked = false;
         }
     }
+});
+
+// ========================================
+// INICIALIZAR AL CARGAR LA PÁGINA
+// ========================================
+document.addEventListener('DOMContentLoaded', function() {
+    initSmoothScroll();
 });

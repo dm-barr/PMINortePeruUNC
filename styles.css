@@ -48,6 +48,7 @@
     --transition-slow: all 0.4s ease;
 }
 
+
 /* ========================================
    ESTILOS GENERALES
 ======================================== */
@@ -57,6 +58,7 @@
     box-sizing: border-box;
 }
 
+
 body {
     font-family: 'Open Sans', sans-serif;
     color: var(--color-text-dark);
@@ -64,6 +66,7 @@ body {
     line-height: 1.6;
     overflow-x: hidden;
 }
+
 
 /* ========================================
    BARRA SUPERIOR
@@ -78,6 +81,7 @@ body {
     box-shadow: var(--shadow-sm);
 }
 
+
 .topbar-left a {
     color: var(--color-text-dark);
     text-decoration: none;
@@ -86,10 +90,12 @@ body {
     transition: var(--transition-fast);
 }
 
+
 .topbar-left a:hover {
     color: var(--color-primary);
     transform: scale(1.1);
 }
+
 
 .topbar-right {
     display: flex;
@@ -97,10 +103,12 @@ body {
     font-size: 0.95em;
 }
 
+
 .topbar-right .separator {
     margin: 0 var(--spacing-xs);
     color: #777;
 }
+
 
 .topbar-right .contact-link {
     color: #3FC0F0;
@@ -109,10 +117,12 @@ body {
     transition: var(--transition-fast);
 }
 
+
 .topbar-right .contact-link:hover {
     color: #1a6c8c;
     text-decoration: underline;
 }
+
 
 /* ========================================
    NAVBAR PRINCIPAL CON MENÚ HAMBURGUESA
@@ -120,6 +130,7 @@ body {
 .menu-toggle {
     display: none;
 }
+
 
 .navbar {
     background: var(--gradient-primary);
@@ -129,6 +140,7 @@ body {
     z-index: 1000;
 }
 
+
 .nav-container {
     display: flex;
     justify-content: space-between;
@@ -137,10 +149,12 @@ body {
     margin: 0 auto;
 }
 
+
 .logo {
     height: 50px;
     z-index: 1001;
 }
+
 
 .menu-icon {
     display: none;
@@ -151,12 +165,14 @@ body {
     z-index: 1001;
 }
 
+
 .menu {
     list-style: none;
     display: flex;
     gap: 20px;
     align-items: center;
 }
+
 
 .menu a {
     color: var(--color-white);
@@ -166,9 +182,11 @@ body {
     transition: var(--transition-fast);
 }
 
+
 .menu a:hover {
     color: #3FC0F0;
 }
+
 
 .btn-hazte {
     background: #3FC0F0;
@@ -180,12 +198,14 @@ body {
     transition: var(--transition-base);
 }
 
+
 .btn-hazte:hover {
     background: #FF610F;
     color: var(--color-white);
     box-shadow: var(--shadow-naranja);
     transform: translateY(-2px);
 }
+
 
 /* ========================================
    HERO PRINCIPAL
@@ -203,6 +223,7 @@ body {
     overflow: hidden;
 }
 
+
 .hero-video {
     position: absolute;
     top: 50%;
@@ -216,6 +237,7 @@ body {
     z-index: 0;
 }
 
+
 .hero-overlay {
     position: absolute;
     top: 0;
@@ -226,6 +248,7 @@ body {
     z-index: 1;
 }
 
+
 .hero-text {
     position: relative;
     z-index: 2;
@@ -234,6 +257,7 @@ body {
     max-width: 1000px;
 }
 
+
 .hero-text h1 {
     font-size: 3em;
     font-weight: 800;
@@ -241,12 +265,14 @@ body {
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
 }
 
+
 .hero-text p {
     font-size: 1.2em;
     margin-bottom: var(--spacing-md);
     line-height: 1.6;
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
 }
+
 
 @keyframes fadeInUp {
     from {
@@ -259,6 +285,7 @@ body {
     }
 }
 
+
 /* ========================================
    QUIÉNES SOMOS
 ======================================== */
@@ -268,6 +295,7 @@ body {
     padding: var(--spacing-xl) 20px;
 }
 
+
 .quienes-somos h2 {
     color: #3FC0F0;
     font-size: 2.5em;
@@ -276,6 +304,7 @@ body {
     position: relative;
     display: inline-block;
 }
+
 
 .quienes-somos h2::after {
     content: "";
@@ -287,6 +316,7 @@ body {
     border-radius: 3px;
 }
 
+
 .quienes-somos .descripcion {
     max-width: 800px;
     margin: 0 auto var(--spacing-lg);
@@ -294,6 +324,7 @@ body {
     font-size: 1.1em;
     line-height: 1.8;
 }
+
 
 .cards {
     display: flex;
@@ -303,6 +334,7 @@ body {
     max-width: 1200px;
     margin: 0 auto;
 }
+
 
 .card {
     background: var(--gradient-dark);
@@ -318,6 +350,7 @@ body {
     overflow: hidden;
 }
 
+
 .card::before {
     content: '';
     position: absolute;
@@ -330,14 +363,17 @@ body {
     transition: var(--transition-slow);
 }
 
+
 .card:hover::before {
     opacity: 1;
 }
+
 
 .card:hover {
     transform: translateY(-10px) scale(1.02);
     box-shadow: 0 15px 40px rgba(63, 192, 240, 0.4);
 }
+
 
 .icono-img {
     width: 80px;
@@ -346,9 +382,11 @@ body {
     transition: var(--transition-base);
 }
 
+
 .card:hover .icono-img {
     transform: scale(1.1) rotate(5deg);
 }
+
 
 .card h3 {
     font-size: 1.4em;
@@ -357,11 +395,13 @@ body {
     font-weight: 700;
 }
 
+
 .card p {
     font-size: 0.95em;
     line-height: 1.6;
     color: var(--color-text-light);
 }
+
 
 /* ========================================
    ESTILOS COMPARTIDOS PARA SECCIONES
@@ -373,12 +413,14 @@ body {
     padding: var(--spacing-2xl) 20px;
 }
 
+
 .container-eventos,
 .container-noticias,
 .container-formacion {
     max-width: 1200px;
     margin: 0 auto;
 }
+
 
 /* Títulos de secciones */
 .titulo-eventos,
@@ -392,6 +434,7 @@ body {
     margin-bottom: 40px;
 }
 
+
 .titulo-eventos h2,
 .titulo-noticias h2,
 .formacion-header h2 {
@@ -402,22 +445,26 @@ body {
     padding-right: 20px;
 }
 
+
 .titulo-eventos h2,
 .titulo-noticias h2 {
     color: #4F17A8;
     border-color: #4F17A8;
 }
 
+
 .formacion-header h2 {
     color: #3FC0F0;
     border-color: #3FC0F0;
 }
+
 
 .titulo-eventos span,
 .titulo-noticias span,
 .formacion-header span {
     display: block;
 }
+
 
 .titulo-eventos p,
 .titulo-noticias p,
@@ -429,6 +476,7 @@ body {
     color: var(--color-text-medium);
     padding-left: 18px;
 }
+
 
 /* ========================================
    FILTROS COMPARTIDOS
@@ -442,6 +490,7 @@ body {
     margin-bottom: var(--spacing-lg);
     justify-content: center;
 }
+
 
 .filtros button,
 .filtros-noticias button,
@@ -460,11 +509,13 @@ body {
     font-size: 0.9em;
 }
 
+
 .filtros-noticias button,
 .filtros-formacion button {
     background: var(--gradient-celeste-suave);
     box-shadow: var(--shadow-celeste);
 }
+
 
 .filtros button::before,
 .filtros-noticias button::before,
@@ -481,6 +532,7 @@ body {
     transition: width 0.6s, height 0.6s;
 }
 
+
 .filtros button:hover::before,
 .filtros-noticias button:hover::before,
 .filtros-formacion button:hover::before {
@@ -488,12 +540,14 @@ body {
     height: 300px;
 }
 
+
 .filtros button:hover,
 .filtros-noticias button:hover,
 .filtros-formacion button:hover {
     transform: translateY(-2px);
     box-shadow: var(--shadow-naranja);
 }
+
 
 /* ========================================
    TARJETAS COMPARTIDAS
@@ -508,6 +562,7 @@ body {
     max-width: 1200px;
     margin: 0 auto;
 }
+
 
 .card-evento,
 .card-noticia,
@@ -525,12 +580,14 @@ body {
     max-width: 350px;
 }
 
+
 .card-evento:hover,
 .card-noticia:hover,
 .card-formacion:hover {
     transform: translateY(-8px);
     box-shadow: 0 15px 40px rgba(63, 192, 240, 0.4);
 }
+
 
 .card-evento .fecha,
 .card-noticia .fecha,
@@ -546,6 +603,7 @@ body {
     color: #FF610F;
 }
 
+
 .card-evento img,
 .card-noticia img,
 .card-formacion img {
@@ -557,11 +615,13 @@ body {
     object-fit: cover;
 }
 
+
 .card-evento:hover img,
 .card-noticia:hover img,
 .card-formacion:hover img {
     transform: scale(1.05);
 }
+
 
 .card-evento h3,
 .card-noticia h3,
@@ -572,6 +632,7 @@ body {
     color: var(--color-white);
 }
 
+
 .card-evento p,
 .card-noticia p,
 .card-formacion p {
@@ -579,6 +640,7 @@ body {
     color: var(--color-text-light);
     line-height: 1.5;
 }
+
 
 /* ========================================
    FORMACIÓN ESPECÍFICA
@@ -596,11 +658,13 @@ body {
     transition: var(--transition-base);
 }
 
+
 .btn-card:hover {
     background: var(--gradient-celeste-suave);
     transform: translateY(-2px) scale(1.05);
     box-shadow: var(--shadow-celeste);
 }
+
 
 /* ========================================
    CTA Y VOLUNTARIADO
@@ -624,13 +688,16 @@ body {
     scroll-margin-top: 80px;
 }
 
+
 .cta {
     background-image: url("../img/recursos/morado.png");
 }
 
+
 .voluntariado {
     background-image: url("../img/recursos/celeste.png");
 }
+
 
 .cta-fondo {
     position: absolute;
@@ -644,11 +711,13 @@ body {
     backdrop-filter: blur(2px);
 }
 
+
 .cta-content,
 .voluntariado-content {
     position: relative;
     z-index: 1;
 }
+
 
 .cta h2,
 .voluntariado h2 {
@@ -657,6 +726,7 @@ body {
     margin-bottom: var(--spacing-sm);
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
 }
+
 
 .cta p,
 .voluntariado p {
@@ -668,6 +738,7 @@ body {
     margin-right: auto;
 }
 
+
 .cta-buttons,
 .voluntariado-buttons {
     display: flex;
@@ -675,6 +746,7 @@ body {
     gap: 20px;
     flex-wrap: wrap;
 }
+
 
 .btn-cta,
 .btn-vol {
@@ -687,10 +759,12 @@ body {
     box-shadow: var(--shadow-md);
 }
 
+
 .btn-primary {
     background: var(--gradient-morado-suave);
     color: var(--color-white);
 }
+
 
 .btn-primary:hover {
     background: #FF610F;
@@ -698,12 +772,14 @@ body {
     box-shadow: var(--shadow-naranja);
 }
 
+
 .btn-secondary,
 .btn-blanco {
     background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%);
     color: #4F17A8;
     border: 2px solid #4F17A8;
 }
+
 
 .btn-secondary:hover,
 .btn-blanco:hover {
@@ -714,16 +790,19 @@ body {
     box-shadow: var(--shadow-naranja);
 }
 
+
 .btn-azul {
     background: var(--gradient-celeste-suave);
     color: var(--color-white);
 }
+
 
 .btn-azul:hover {
     background: #FF610F;
     transform: translateY(-3px);
     box-shadow: var(--shadow-naranja);
 }
+
 
 /* ========================================
    CARRUSEL DE JUNTA DIRECTIVA
@@ -733,6 +812,7 @@ body {
     background: var(--color-light-bg);
 }
 
+
 .carousel-container {
     position: relative;
     max-width: 1200px;
@@ -740,21 +820,25 @@ body {
     padding: 0 60px;
 }
 
+
 .carousel-wrapper {
     overflow: hidden;
     border-radius: 20px;
 }
+
 
 .carousel-track {
     display: flex;
     transition: transform 0.5s ease-in-out;
 }
 
+
 .carousel-slide {
     min-width: 100%;
     padding: 30px 20px;
     box-sizing: border-box;
 }
+
 
 .titulo-cargo {
     font-size: 2rem;
@@ -764,6 +848,7 @@ body {
     margin-bottom: 30px;
     position: relative;
 }
+
 
 .titulo-cargo::after {
     content: '';
@@ -775,12 +860,14 @@ body {
     border-radius: 2px;
 }
 
+
 .cards-junta {
     display: flex;
     justify-content: center;
     gap: 30px;
     flex-wrap: wrap;
 }
+
 
 .card-miembro {
     background: var(--color-white);
@@ -796,10 +883,12 @@ body {
     min-width: 200px;
 }
 
+
 .card-miembro:hover {
     transform: translateY(-10px);
     box-shadow: 0 15px 35px rgba(79, 23, 168, 0.25);
 }
+
 
 .card-miembro img {
     width: 150px;
@@ -811,10 +900,12 @@ body {
     transition: var(--transition-base);
 }
 
+
 .card-miembro:hover img {
     border-color: var(--color-accent);
     transform: scale(1.05);
 }
+
 
 .card-miembro h4 {
     font-size: 1.2rem;
@@ -823,6 +914,7 @@ body {
     margin: 10px 0 5px;
 }
 
+
 .card-miembro .cargo {
     font-size: 1rem;
     font-weight: 600;
@@ -830,12 +922,14 @@ body {
     margin: 5px 0;
 }
 
+
 .card-miembro .descripcion-cargo {
     font-size: 0.9rem;
     color: var(--color-text-medium);
     line-height: 1.5;
     margin-top: 10px;
 }
+
 
 /* Botones del carrusel */
 .carousel-btn {
@@ -855,19 +949,23 @@ body {
     box-shadow: var(--shadow-md);
 }
 
+
 .carousel-btn:hover {
     background: var(--color-accent);
     box-shadow: var(--shadow-naranja);
     transform: translateY(-50%) scale(1.1);
 }
 
+
 .carousel-btn.prev {
     left: 0;
 }
 
+
 .carousel-btn.next {
     right: 0;
 }
+
 
 /* Indicadores */
 .carousel-indicators {
@@ -876,6 +974,7 @@ body {
     gap: 10px;
     margin-top: 30px;
 }
+
 
 .carousel-indicator {
     width: 12px;
@@ -886,15 +985,18 @@ body {
     transition: var(--transition-fast);
 }
 
+
 .carousel-indicator.active {
     background: var(--color-primary);
     width: 30px;
     border-radius: 6px;
 }
 
+
 .carousel-indicator:hover {
     background: var(--color-accent);
 }
+
 
 /* ========================================
    ICONOS PARA MIEMBROS
@@ -912,16 +1014,19 @@ body {
     transition: var(--transition-base);
 }
 
+
 .foto-miembro-icon i {
     font-size: 4rem;
     color: var(--color-white);
 }
+
 
 .card-miembro:hover .foto-miembro-icon {
     border-color: var(--color-accent);
     transform: scale(1.05);
     background: var(--gradient-accent-highlight);
 }
+
 
 /* ========================================
    ICONOS PARA EVENTOS Y EJES
@@ -938,15 +1043,18 @@ body {
     transition: var(--transition-base);
 }
 
+
 .icono-evento i {
     font-size: 3.5rem;
     color: var(--color-white);
 }
 
+
 .card-evento:hover .icono-evento {
     transform: scale(1.1) rotate(10deg);
     background: var(--gradient-accent-highlight);
 }
+
 
 .icono-eje {
     width: 100px;
@@ -960,15 +1068,18 @@ body {
     transition: var(--transition-base);
 }
 
+
 .icono-eje i {
     font-size: 3rem;
     color: var(--color-white);
 }
 
+
 .card-noticia:hover .icono-eje {
     transform: scale(1.15) rotate(-10deg);
     background: var(--gradient-naranja);
 }
+
 
 /* ========================================
    CONTACTO
@@ -979,6 +1090,7 @@ body {
     text-align: center;
 }
 
+
 .titulo-contacto {
     font-size: 2.8em;
     font-weight: 800;
@@ -986,6 +1098,7 @@ body {
     margin-bottom: 40px;
     position: relative;
 }
+
 
 .titulo-contacto::after {
     content: "";
@@ -997,6 +1110,7 @@ body {
     border-radius: 2px;
 }
 
+
 .container-contacto {
     display: flex;
     justify-content: center;
@@ -1006,6 +1120,7 @@ body {
     gap: 40px;
     flex-wrap: wrap;
 }
+
 
 .columna-formulario {
     flex: 1;
@@ -1017,12 +1132,14 @@ body {
     text-align: left;
 }
 
+
 .form-contacto label {
     display: block;
     font-weight: 600;
     color: var(--color-text-dark);
     margin-top: var(--spacing-sm);
 }
+
 
 .form-contacto input,
 .form-contacto textarea,
@@ -1037,6 +1154,7 @@ body {
     font-size: 1em;
 }
 
+
 .form-contacto select {
     color: var(--color-text-dark);
     background-color: var(--color-white);
@@ -1049,6 +1167,7 @@ body {
     padding-right: 40px;
 }
 
+
 .form-contacto input:focus,
 .form-contacto textarea:focus,
 .form-contacto select:focus {
@@ -1057,9 +1176,11 @@ body {
     box-shadow: 0 0 0 3px rgba(79, 23, 168, 0.1);
 }
 
+
 .form-contacto select:hover {
     border-color: var(--color-secondary);
 }
+
 
 .check-group {
     display: flex;
@@ -1067,6 +1188,7 @@ body {
     gap: 8px;
     margin: 15px 0 10px 0;
 }
+
 
 .check-group label {
     display: flex;
@@ -1077,6 +1199,7 @@ body {
     cursor: pointer;
 }
 
+
 .check-group input[type="checkbox"] {
     width: 16px;
     height: 16px;
@@ -1084,6 +1207,7 @@ body {
     border-radius: 3px;
     margin: 0;
 }
+
 
 .btn-enviar {
     margin-top: 20px;
@@ -1100,11 +1224,13 @@ body {
     font-size: 1em;
 }
 
+
 .btn-enviar:hover {
     transform: translateY(-2px) scale(1.02);
     box-shadow: 0 12px 30px rgba(255, 97, 15, 0.5);
     background: var(--gradient-celeste-suave);
 }
+
 
 .columna-imagen {
     flex: 1;
@@ -1113,6 +1239,7 @@ body {
     align-items: center;
     justify-content: center;
 }
+
 
 .icono-contacto {
     width: 100%;
@@ -1125,11 +1252,13 @@ body {
     border-radius: 15px;
 }
 
+
 .icono-contacto i {
     font-size: 10rem;
     color: var(--color-white);
     animation: float 3s ease-in-out infinite;
 }
+
 
 @keyframes float {
     0%, 100% {
@@ -1139,6 +1268,7 @@ body {
         transform: translateY(-20px);
     }
 }
+
 
 /* ========================================
    FOOTER
@@ -1155,9 +1285,11 @@ body {
     box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
 }
 
+
 /* ========================================
    RESPONSIVE MOBILE
 ======================================== */
+
 
 /* Tablets y móviles grandes (hasta 900px) */
 @media (max-width: 900px) {
@@ -1293,6 +1425,7 @@ body {
     }
 }
 
+
 /* Móviles (hasta 768px) */
 @media (max-width: 768px) {
     /* Espaciados generales */
@@ -1325,18 +1458,18 @@ body {
         height: 40px;
     }
     
-    /* Hero */
+    /* Hero - AJUSTE PARA QUE OCUPE TODA LA PANTALLA INICIALMENTE */
     .hero {
-        height: 60vh;
-        min-height: 350px;
+        height: calc(100vh - 100px);
+        min-height: 500px;
     }
     
     .hero-text h1 {
-        font-size: 1.6em;
+        font-size: 1.8em;
     }
     
     .hero-text p {
-        font-size: 0.95em;
+        font-size: 1em;
     }
     
     /* Quiénes somos */
@@ -1455,20 +1588,21 @@ body {
     }
 }
 
+
 /* Móviles pequeños (hasta 480px) */
 @media (max-width: 480px) {
     /* Hero */
     .hero {
-        height: 50vh;
-        min-height: 300px;
+        height: calc(100vh - 90px);
+        min-height: 450px;
     }
     
     .hero-text h1 {
-        font-size: 1.4em;
+        font-size: 1.5em;
     }
     
     .hero-text p {
-        font-size: 0.9em;
+        font-size: 0.95em;
     }
     
     /* Títulos principales */
@@ -1593,59 +1727,11 @@ body {
     }
 }
 
+
 /* Landscape en móviles */
 @media (max-width: 900px) and (orientation: landscape) {
     .hero {
         height: 100vh;
-        min-height: 400px;
-    }
-}
-
-/* ========================================
-   OCULTAR SECCIONES EN CARGA MÓVIL
-======================================== */
-@media (max-width: 768px) {
-    /* Ocultar todas las secciones excepto hero al cargar */
-    #vision-mision,
-    #ejes,
-    #junta,
-    #eventos,
-    #contacto {
-        display: none;
-        opacity: 0;
-        transition: opacity 0.6s ease-in-out;
-    }
-    
-    /* Mostrar secciones cuando tienen la clase 'visible' */
-    #vision-mision.visible,
-    #ejes.visible,
-    #junta.visible,
-    #eventos.visible,
-    #contacto.visible {
-        display: block;
-        opacity: 1;
-    }
-    
-    /* Asegurar que hero ocupe toda la pantalla inicialmente */
-    .hero {
-        height: calc(100vh - 100px); /* Restar altura de topbar + navbar */
-        min-height: 500px;
-    }
-    
-    /* Ajustar el footer para móviles */
-    .footer {
-        display: none;
-    }
-    
-    .footer.visible {
-        display: block;
-    }
-}
-
-/* Para móviles pequeños */
-@media (max-width: 480px) {
-    .hero {
-        height: calc(100vh - 90px);
         min-height: 400px;
     }
 }
