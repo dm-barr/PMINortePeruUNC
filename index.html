@@ -513,8 +513,6 @@
         <div class="carousel-indicators" id="carouselIndicators"></div>
     </section>
 
-
-
     <!-- EVENTOS -->
     <section id="eventos" class="voluntariado">
         <div class="cta-fondo"></div>
@@ -526,10 +524,45 @@
             </p>
             <div class="voluntariado-buttons">
                 <a href="#" class="btn-vol btn-blanco">Ver Calendario</a>
-                <a href="#" class="btn-vol btn-azul">Inscríbete Ahora</a>
+                <button class="btn-vol btn-azul" id="btnInscribirse">Inscríbete Ahora</button>
+                
             </div>
         </div>
-    </section>
+    </section>    
+
+    <!-- FORMULARIO DE VOLUNTARIADO PARA EVENTOS -->
+    <div id="formModal" class="modal oculto">
+        <div class="modal-content">
+            <h3>Formulario de Voluntariado</h3>
+            <form id="voluntarioForm">
+                <label for="nombre">Nombre completo:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="correo">Correo electrónico:</label>
+                <input type="email" id="correo" name="correo" required>
+
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono">
+
+                <label for="interes">Área de interés:</label>
+                <select id="interes" name="interes" required>
+                    <option value="">Selecciona una opción</option>
+                    <option value="logistica">Logística</option>
+                    <option value="difusion">Difusión y redes</option>
+                    <option value="contenido">Creación de contenido</option>
+                    <option value="apoyo">Apoyo general</option>
+                </select>
+
+                <label for="mensaje">¿Por qué te gustaría participar?</label>
+                <textarea id="mensaje" name="mensaje" rows="4"></textarea>
+
+                <div class="form-buttons">
+                    <button type="submit" class="btn-vol btn-azul">Enviar</button>
+                    <button type="button" class="btn-vol btn-blanco" id="btnCerrarForm">Cancelar</button>
+                </div>
+            </form>
+        </div>
+    </div>
 
 
     <!-- CONTACTO -->
@@ -541,87 +574,31 @@
                     <label for="nombre">Nombre Completo</label>
                     <input type="text" id="nombre" name="nombre" required>
 
-
                     <label for="email">Correo Electrónico</label>
                     <input type="email" id="email" name="email" required>
-
-
-                    <label for="carrera">Carrera</label>
-                    <select id="carrera" name="carrera" required>
-                        <option value="">Selecciona tu carrera</option>
-                        <option value="administracion">Administración</option>
-                        <option value="agronomia">Agronomía</option>
-                        <option value="contabilidad">Contabilidad</option>
-                        <option value="contabilidad-chota">Contabilidad - Chota</option>
-                        <option value="derecho">Derecho</option>
-                        <option value="economia">Economía</option>
-                        <option value="educacion-cc-nn-qq-biol">Educación: CC. NN., QQ. y Biología</option>
-                        <option value="educacion-primaria">Educación: Educación Primaria</option>
-                        <option value="educacion-ingles-espanol">Educación: Inglés y Español</option>
-                        <option value="educacion-lenguaje-literat">Educación: Lenguaje y Literatura</option>
-                        <option value="educacion-matematica-fisica">Educación: Matemática y Física</option>
-                        <option value="enfermeria">Enfermería</option>
-                        <option value="enfermeria-jaen">Enfermería - Jaén</option>
-                        <option value="ing-industrias-aliment">Ingeniería en Industrias Alimentarias</option>
-                        <option value="ing-indust-aliment-cajabamba">Ingeniería en Industrias Alimentarias - Cajabamba
-                        </option>
-                        <option value="ingenieria-civil">Ingeniería Civil</option>
-                        <option value="ingenieria-civil-jaen">Ingeniería Civil - Jaén</option>
-                        <option value="ingenieria-forestal">Ingeniería Forestal</option>
-                        <option value="ingenieria-forestal-jaen">Ingeniería Forestal - Jaén</option>
-                        <option value="ingenieria-geologica">Ingeniería Geológica</option>
-                        <option value="ingenieria-hidraulica">Ingeniería Hidráulica</option>
-                        <option value="ingenieria-minas">Ingeniería de Minas</option>
-                        <option value="ingenieria-sistemas">Ingeniería de Sistemas</option>
-                        <option value="ingenieria-zootecnista">Ingeniería Zootecnista</option>
-                        <option value="medicina-humana">Medicina Humana</option>
-                        <option value="medicina-veterinaria">Medicina Veterinaria</option>
-                        <option value="obstetricia">Obstetricia</option>
-                        <option value="biologia-biotecnologia">Biología y Biotecnología</option>
-                        <option value="sociologia">Sociología</option>
-                        <option value="turismo-hoteleria">Turismo y Hotelería</option>
-                        <option value="ing-geologia-bambamarca">Ingeniería Geológica - Bambamarca</option>
-                        <option value="ing-sanitaria-celendin">Ingeniería Sanitaria - Celendín</option>
-                        <option value="ing-ambiental-celendin">Ingeniería Ambiental - Celendín</option>
-
-
-                    </select>
-
-
-                    <label for="telefono">Teléfono</label>
-                    <input type="tel" id="telefono" name="telefono" required>
-
-
-                    <label for="codigo">Código de Estudiante</label>
-                    <input type="text" id="codigo" name="codigo" required>
-
-
-                    <label for="area-interes">¿En qué área tiene interés de pertenecer?</label>
-                    <select id="area-interes" name="area-interes" required>
-                        <option value="">Selecciona un área</option>
-                        <option value="academica">Coordinación Académica</option>
-                        <option value="comunicaciones">Coordinación de Comunicaciones</option>
-                        <option value="eventos">Coordinación de Eventos</option>
-                        <option value="finanzas">Coordinación de Finanzas</option>
-                        <option value="logistica">Coordinación de Logística</option>
-                        <option value="proyectos">Coordinación de Proyectos</option>
-                        <option value="eje-ambiental">Eje Ambiental</option>
-                        <option value="eje-cultural">Eje Cultural</option>
-                        <option value="eje-economico">Eje Económico</option>
-                        <option value="eje-social">Eje Social</option>
-                        <option value="eje-tecnologico">Eje Tecnológico</option>
-                        <option value="consejeria">Consejería</option>
-                    </select>
-
 
                     <label for="mensaje">Mensaje</label>
                     <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
 
+                    <div class="form-check">
+                        <input type="checkbox" id="acepto-politicas" name="acepto-politicas" required>
+                        <label for="acepto-politicas">He leído y acepto las <a href="/politicas" target="_blank">políticas de privacidad</a></label>
+                    </div>
 
-                    <button type="submit" class="btn-enviar">Enviar Mensaje</button>
+                    <div class="form-check">
+                        <input type="checkbox" id="boletin" name="boletin">
+                        <label for="boletin">Deseo suscribirme al boletín informativo</label>
+                    </div>
+
+                    <button type="submit" class="btn-enviar">Enviar</button>
                 </form>
-            </div>
 
+                <!-- Botón de reclutamiento centrado -->
+                <div class="reclutamiento-center">
+                    <button type="button" class="btn-reclutamiento" id="btnReclutamiento"> Quiero unirme</button>
+                </div>
+
+                </div>
 
             <div class="columna-imagen">
                 <div class="icono-contacto">
@@ -630,6 +607,88 @@
             </div>
         </div>
     </section>
+
+    <!-- MODAL RECLUTAMIENTO -->
+<div id="formModalReclutamiento" class="modal oculto">
+    <div class="modal-content">
+        <span class="modal-close" id="btnCerrarReclu">&times;</span>
+        <h3>Formulario de Reclutamiento</h3>
+
+        <form id="reclutamientoForm">
+            <label for="nombreReclu">Nombre Completo</label>
+            <input type="text" id="nombreReclu" name="nombreReclu" required>
+
+            <label for="emailReclu">Correo Electrónico</label>
+            <input type="email" id="emailReclu" name="emailReclu" required>
+
+            <label for="carreraReclu">Carrera</label>
+            <select id="carreraReclu" name="carreraReclu" required>
+                <option value="">Selecciona tu carrera</option>
+                <option value="administracion">Administración</option>
+                <option value="agronomia">Agronomía</option>
+                <option value="contabilidad">Contabilidad</option>
+                <option value="contabilidad-chota">Contabilidad - Chota</option>
+                <option value="derecho">Derecho</option>
+                <option value="economia">Economía</option>
+                <option value="educacion-cc-nn-qq-biol">Educación: CC. NN., QQ. y Biología</option>
+                <option value="educacion-primaria">Educación: Educación Primaria</option>
+                <option value="educacion-ingles-espanol">Educación: Inglés y Español</option>
+                <option value="educacion-lenguaje-literat">Educación: Lenguaje y Literatura</option>
+                <option value="educacion-matematica-fisica">Educación: Matemática y Física</option>
+                <option value="enfermeria">Enfermería</option>
+                <option value="enfermeria-jaen">Enfermería - Jaén</option>
+                <option value="ing-industrias-aliment">Ingeniería en Industrias Alimentarias</option>
+                <option value="ing-indust-aliment-cajabamba">Ingeniería en Industrias Alimentarias - Cajabamba</option>
+                <option value="ingenieria-civil">Ingeniería Civil</option>
+                <option value="ingenieria-civil-jaen">Ingeniería Civil - Jaén</option>
+                <option value="ingenieria-forestal">Ingeniería Forestal</option>
+                <option value="ingenieria-forestal-jaen">Ingeniería Forestal - Jaén</option>
+                <option value="ingenieria-geologica">Ingeniería Geológica</option>
+                <option value="ingenieria-hidraulica">Ingeniería Hidráulica</option>
+                <option value="ingenieria-minas">Ingeniería de Minas</option>
+                <option value="ingenieria-sistemas">Ingeniería de Sistemas</option>
+                <option value="ingenieria-zootecnista">Ingeniería Zootecnista</option>
+                <option value="medicina-humana">Medicina Humana</option>
+                <option value="medicina-veterinaria">Medicina Veterinaria</option>
+                <option value="obstetricia">Obstetricia</option>
+                <option value="biologia-biotecnologia">Biología y Biotecnología</option>
+                <option value="sociologia">Sociología</option>
+                <option value="turismo-hoteleria">Turismo y Hotelería</option>
+                <option value="ing-geologia-bambamarca">Ingeniería Geológica - Bambamarca</option>
+                <option value="ing-sanitaria-celendin">Ingeniería Sanitaria - Celendín</option>
+                <option value="ing-ambiental-celendin">Ingeniería Ambiental - Celendín</option>
+            </select>
+
+            <label for="telefonoReclu">Teléfono</label>
+            <input type="tel" id="telefonoReclu" name="telefonoReclu" required>
+
+            <label for="codigoReclu">Código de Estudiante</label>
+            <input type="text" id="codigoReclu" name="codigoReclu" required>
+
+            <label for="areaInteresReclu">¿En qué área tiene interés de pertenecer?</label>
+            <select id="areaInteresReclu" name="areaInteresReclu" required>
+                <option value="">Selecciona un área</option>
+                <option value="academica">Coordinación Académica</option>
+                <option value="comunicaciones">Coordinación de Comunicaciones</option>
+                <option value="eventos">Coordinación de Eventos</option>
+                <option value="finanzas">Coordinación de Finanzas</option>
+                <option value="logistica">Coordinación de Logística</option>
+                <option value="proyectos">Coordinación de Proyectos</option>
+                <option value="eje-ambiental">Eje Ambiental</option>
+                <option value="eje-cultural">Eje Cultural</option>
+                <option value="eje-economico">Eje Económico</option>
+                <option value="eje-social">Eje Social</option>
+                <option value="eje-tecnologico">Eje Tecnológico</option>
+                <option value="consejeria">Consejería</option>
+            </select>
+
+            <label for="mensajeReclu">Mensaje</label>
+            <textarea id="mensajeReclu" name="mensajeReclu" rows="5" required></textarea>
+
+            <button type="submit" class="btn-enviar">Enviar Mensaje</button>
+        </form>
+    </div>
+</div>
 
 
     <!-- FOOTER -->
