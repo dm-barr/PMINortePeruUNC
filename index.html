@@ -258,7 +258,8 @@
                     <div class="carousel-slide">
                         <h3 class="titulo-cargo">Presidencia</h3>
                         <div class="cards-junta">
-                                <img src="img/fotos/MarisolRodríguez.jpeg" alt="Foto de Marisol Rodriguez Díaz">                            
+                            <div class="card-miembro">
+                                <img src="img/fotos/MarisolRodríguez.jpeg" alt="Foto de Marisol Rodriguez Díaz">
                                 <h4>Jessica Marisol Rodriguez Díaz</h4>
                                 <p class="cargo">Presidenta</p>
                                 <p class="descripcion-cargo">Estudiante de Ingeniería Civil</p>
@@ -439,27 +440,27 @@
                                 <p class="cargo">Sub-Coord. Eje Social</p>
                                 <p class="descripcion-cargo">Estudiante de Medicina Humana</p>
                             </div>
-                            <div clase="card-miembro">
+                            <div class="card-miembro">
                                 <img src="img/fotos/DianaBarrantes.jpg" alt="Foto de Michelle Barrantes Gallardo">
                                 <h4>Diana Michelle Barrantes Gallardo</h4>
-                                <p clase="carga">Subcoord. Eje Tecnológico</p>
-                                <p clase="descripción-carga">Estudiante de Ingeniería de Sistemas</p>
+                                <p class="cargo">Sub-Coord. Eje Tecnológico</p>
+                                <p class="descripcion-cargo">Estudiante de Ingeniería de Sistemas</p>
                             </div>
                         </div>
                     </div>
 
 
                     <!-- CONSEJERÍA -->
-                    <div clase="tobogán de carrusel">
-                        <h3 clase="típulo-carga">Consejería</h3>
-                        <div clase="junta de cartas">
-                            <div clase="card-miembro">
-                                <div clase="foto-miembro-icono">
-                                    <i clase="escudo de usuario fas fa"></i>
+                    <div class="carousel-slide">
+                        <h3 class="titulo-cargo">Consejería</h3>
+                        <div class="cards-junta">
+                            <div class="card-miembro">
+                                <div class="foto-miembro-icon">
+                                    <i class="fas fa-user-shield"></i>
                                 </div>
                                 <h4>Lenyn Joseph Tirado García</h4>
-                                <p clase="carga">Consejero</p>
-                                <p clase="descripción-carga">Estudio de Ingeniería Civil</p>
+                                <p class="cargo">Consejero</p>
+                                <p class="descripcion-cargo">Estudiante de Ingeniería Civil</p>
                             </div>
                         </div>
                     </div>
@@ -469,38 +470,38 @@
             </div>
 
 
-            <botón clase="carrusel-btn siguiente" onclick="mover carrusel(1)"&#10095;&#10095;</botón>
+            <button class="carousel-btn next" onclick="moveCarousel(1)">&#10095;</button>
         </div>
 
 
         <!-- Indicadores del carrusel -->
-        <div clase="indicadores de carrusel" id="Indicadores de carrusel"></div>
-    </sección>
+        <div class="carousel-indicators" id="carouselIndicators"></div>
+    </section>
 
     <!-- EVENTOS -->
-    <sección id="eventos" clase="voluntariado">
-        <div clase="cta-fondo"></div>
-        <div clase="contenido voluntario">
+    <section id="eventos" class="voluntariado">
+        <div class="cta-fondo"></div>
+        <div class="voluntariado-content">
             <h2>Próximos Eventos</h2>
             <p>
- Participa en nuestras actividades formativas: talleres, conferencias, círculos de estudio
- y proyectos colaborativos basados en los estándares del PMI.
+                Participa en nuestras actividades formativas: talleres, conferencias, círculos de estudio
+                y proyectos colaborativos basados en los estándares del PMI.
             </p>
-            <div clase="botones voluntarios">
-                <a href="#" clase="btn-vol btn-blanco">Ver Calendario</a>
-                <botón clase="btn-vol btn-azul" id="btnInscribirse">Inscríbete Ahora</botón>
+            <div class="voluntariado-buttons">
+                <a href="#" class="btn-vol btn-blanco">Ver Calendario</a>
+                <button class="btn-vol btn-azul" id="btnInscribirse">Inscríbete Ahora</button>
                 
             </div>
         </div>
-    </sección>    
+    </section>    
 
-    <!-- FORMULARIO DE VOLUNTARIO PARA EVENTOS -->
-    <div id="formModal" clase="oculto modal">
-        <div clase="modal de contenido">
+    <!-- FORMULARIO DE VOLUNTARIADO PARA EVENTOS -->
+    <div id="formModal" class="modal oculto">
+        <div class="modal-content">
             <h3>Formulario de Voluntariado</h3>
-            <forma id="formulario voluntario">
-                <etiqueta para="nombre">Nombre completo:</etiqueta>
-                <entrada tipo="texto" id="nombre" nombre="nombre" Requerido>
+            <form id="voluntarioForm">
+                <label for="nombre">Nombre completo:</label>
+                <input type="text" id="nombre" name="nombre" required>
 
                 <label for="correo">Correo electrónico:</label>
                 <input type="email" id="correo" name="correo" required>
