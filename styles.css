@@ -953,7 +953,7 @@ body {
 
 .card-miembro img {
     width: 100%;
-    height: auto;
+    height: 55%;
     object-fit: cover;
     margin-bottom: 25px; 
     border-radius: 15px 15px 0 0; 
@@ -1532,7 +1532,7 @@ body {
     
     /* Hero responsive */
     .hero {
-        height: 70vh;
+        height: 100vh;
         min-height: 400px;
     }
     
@@ -1572,7 +1572,7 @@ body {
     .carousel-container {
         padding: 0 50px;
     }
-    
+
     .carousel-btn {
         width: 40px;
         height: 40px;
@@ -1640,7 +1640,7 @@ body {
     
     /* Hero */
     .hero {
-        height: 60vh;
+        height: 100vh;
         min-height: 350px;
     }
     
@@ -1773,7 +1773,7 @@ body {
 @media (max-width: 480px) {
     /* Hero */
     .hero {
-        height: 50vh;
+        height: 100vh;
         min-height: 300px;
     }
     
@@ -1905,6 +1905,7 @@ body {
     .columna-formulario {
         padding: 20px;
     }
+
 }
 
 
