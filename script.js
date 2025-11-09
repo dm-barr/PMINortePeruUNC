@@ -41,7 +41,8 @@ document.addEventListener("DOMContentLoaded", function() {
             indicator.classList.toggle('active', index === currentSlide);
         });
     }
-
+    window.moveCarousel = moveCarousel;
+    window.goToSlide = goToSlide;
     // Auto-avance opcional (cada 5 segundos)
     // setInterval(() => moveCarousel(1), 5000);
 
