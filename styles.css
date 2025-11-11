@@ -6,26 +6,26 @@
     --color-primary: #4F17A8;
     --color-secondary: #3FC0F0;
     --color-accent: #FF610F;
-    
+
     /* Degradados principales */
     --gradient-morado: linear-gradient(135deg, #4F17A8 0%, #2a0c5a 50%, #15062b 100%);
     --gradient-morado-suave: linear-gradient(135deg, #4F17A8 0%, #2a0c5a 100%);
     --gradient-celeste: linear-gradient(135deg, #3FC0F0 0%, #1a6c8c 50%, #0b2e3a 100%);
     --gradient-celeste-suave: linear-gradient(135deg, #3FC0F0 0%, #1a6c8c 100%);
     --gradient-naranja: linear-gradient(135deg, #FF610F 0%, #993707 50%, #3d1603 100%);
-    
+
     /* Degradados combinados para acentos */
     --gradient-primary: linear-gradient(45deg, #4F17A8 0%, #2a0c5a 100%);
     --gradient-accent-highlight: linear-gradient(135deg, #FF610F 0%, #4F17A8 100%);
     --gradient-dark: linear-gradient(to bottom, #15062b, #2a0c5a);
-    
+
     /* Colores neutros */
     --color-white: #ffffff;
     --color-light-bg: #f8f9fa;
     --color-text-dark: #040404;
     --color-text-medium: #555555;
     --color-text-light: #d5d5d5;
-    
+
     /* Sombras con colores de marca */
     --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
     --shadow-md: 0 4px 12px rgba(79, 23, 168, 0.15);
@@ -33,7 +33,7 @@
     --shadow-xl: 0 15px 35px rgba(79, 23, 168, 0.25);
     --shadow-celeste: 0 8px 20px rgba(63, 192, 240, 0.3);
     --shadow-naranja: 0 8px 20px rgba(255, 97, 15, 0.4);
-    
+
     /* Espaciados */
     --spacing-xs: 8px;
     --spacing-sm: 15px;
@@ -41,7 +41,7 @@
     --spacing-lg: 50px;
     --spacing-xl: 80px;
     --spacing-2xl: 100px;
-    
+
     /* Transiciones */
     --transition-fast: all 0.2s ease;
     --transition-base: all 0.3s ease;
@@ -279,6 +279,7 @@ body {
         opacity: 0;
         transform: translateY(30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -670,7 +671,8 @@ body {
    CTA Y VOLUNTARIADO
 ======================================== */
 .cta,
-.voluntariado, .logros {
+.voluntariado,
+.logros {
     position: relative;
     background-size: cover;
     background-position: center;
@@ -717,14 +719,16 @@ body {
 
 
 .cta-content,
-.voluntariado-content, .logro-content {
+.voluntariado-content,
+.logro-content {
     position: relative;
     z-index: 1;
 }
 
 
 .cta h2,
-.voluntariado h2, .logros h2 {
+.voluntariado h2,
+.logros h2 {
     font-size: 2.5rem;
     font-weight: 800;
     margin-bottom: var(--spacing-sm);
@@ -733,7 +737,8 @@ body {
 
 
 .cta p,
-.voluntariado p, .logros p {
+.voluntariado p,
+.logros p {
     font-size: 1.15rem;
     margin-bottom: 40px;
     color: #e0e0e0;
@@ -744,7 +749,8 @@ body {
 
 
 .cta-buttons,
-.voluntariado-buttons, .logro-buttons {
+.voluntariado-buttons,
+.logro-buttons {
     display: flex;
     justify-content: center;
     gap: 20px;
@@ -753,7 +759,8 @@ body {
 
 
 .btn-cta,
-.btn-vol, .btn-logro {
+.btn-vol,
+.btn-logro {
     font-weight: 600;
     padding: 16px 36px;
     border-radius: 30px;
@@ -799,17 +806,20 @@ body {
     background: var(--gradient-celeste-suave);
     color: var(--color-white);
 }
-.btn-morado{
+
+.btn-morado {
     background: var(--gradient-morado-suave);
     color: var(--color-white);
 }
 
 
-.btn-azul:hover, .btn-morado:hover {
+.btn-azul:hover,
+.btn-morado:hover {
     background: #FF610F;
     transform: translateY(-3px);
     box-shadow: var(--shadow-naranja);
 }
+
 /*para el form*/
 .oculto {
     display: none !important;
@@ -839,8 +849,15 @@ body {
 }
 
 @keyframes aparecer {
-    from { opacity: 0; transform: scale(0.9); }
-    to { opacity: 1; transform: scale(1); }
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 .modal-content form {
@@ -955,8 +972,8 @@ body {
     width: 100%;
     height: 55%;
     object-fit: cover;
-    margin-bottom: 25px; 
-    border-radius: 15px 15px 0 0; 
+    margin-bottom: 25px;
+    border-radius: 15px 15px 0 0;
     border: none;
     transition: var(--transition-base);
     margin: 0 0 15px 0;
@@ -1098,6 +1115,180 @@ body {
 
 
 /* ========================================
+   eventos */
+
+/* 🔹 SECCIÓN PM LEARNING */
+.pm-learning {
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    margin-top: 80px;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Parte superior blanca */
+.pm-top {
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 80px;
+    flex-wrap: wrap;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    position: relative;
+}
+
+.pm-top-left {
+    text-align: left;
+}
+
+.pm-top-left h2 {
+    color: #6A0DAD;
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1.1;
+}
+
+/*.pm-top-left h3 {
+    display: block;
+    color: #FF610F;
+    font-size: 1.5rem;
+}*/
+
+.pm-top-left p {
+    font-size: 1.5rem;
+    color: #6A0DAD;
+    font-weight: 700;
+    margin: 5px 0 5px;
+}
+
+
+/* Imagen logo */
+.pm-top-right img {
+    width: 300px;
+    height: auto;
+    object-fit: contain;
+    position: absolute;
+    top: 21px;
+    right: 60px;
+}
+
+/* Parte inferior */
+.pm-bottom {
+    position: relative;
+    background: url("img/logo/unc.jpg") center/cover no-repeat;
+    padding: 70px 20px 100px;
+    border-top: 2px solid #fff;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(20, 0, 40, 0.6);
+    z-index: 0;
+}
+
+/* Tarjetas */
+.contenido {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 25px;
+}
+
+.card-info {
+    background: #fff;
+    border-radius: 25px;
+    padding: 45px 35px;
+    width: 380px;
+    max-width: 95%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Títulos */
+.card-info h3 {
+    color: #ff6200;
+    margin-bottom: 20px;
+    font-size: 1.9rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+/* Texto */
+.card-info p {
+    color: #6A0DAD;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    font-weight: 500;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.card-info p strong {
+    color: #6A0DAD;
+    font-weight: 800;
+}
+
+/* 🔸 BOTONES INFERIORES */
+.pm-buttons {
+    position: relative;
+    z-index: 1;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.btn-inscribete {
+    background: linear-gradient(90deg, #ff4b2b, #ff7e00);
+    color: white;
+    font-weight: bold;
+    padding: 14px 35px;
+    border-radius: 25px;
+    text-decoration: none;
+    box-shadow: 0 0 10px rgba(255, 100, 0, 0.5);
+    transition: 0.3s;
+}
+
+.btn-inscribete:hover {
+    transform: scale(1.05);
+}
+
+.btn-sesiones {
+    background: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    font-weight: bold;
+    padding: 14px 35px;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn-sesiones:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: scale(1.05);
+}
+
+
+
+
+/* ========================================
    ICONOS PARA EVENTOS Y EJES
 ======================================== */
 .icono-evento {
@@ -1150,6 +1341,88 @@ body {
     background: var(--gradient-naranja);
 }
 
+/*SESIONES*/
+.hidden { display: none !important; }
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(20, 0, 40, 0.7);
+    /* morado oscuro transparente */
+    z-index: 999;
+}
+
+/* Ventana emergente */
+#ventanaSesiones {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.95);
+    background: linear-gradient(135deg, #f8f6ff, #ebe3ff);
+    border: 2px solid #5d17c5;
+    padding: 25px 30px;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(93, 23, 197, 0.3);
+    max-width: 600px;
+    width: 90%;
+    z-index: 1000;
+    overflow-y: auto;
+    transition: all 0.25s ease;
+}
+
+#ventanaSesiones:not(.hidden) {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* Título */
+#ventanaSesiones h2 {
+    color: #5d17c5;
+    font-weight: 700;
+    margin-bottom: 18px;
+    text-align: center;
+}
+
+/* Lista */
+#ventanaSesiones ul {
+    list-style: none;
+    padding: 0;
+}
+
+#ventanaSesiones li {
+    margin-bottom: 15px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.6);
+    border-left: 4px solid #5d17c5;
+    border-radius: 8px;
+    color: #3c216d;
+    line-height: 1.5;
+}
+
+/* Botón cerrar */
+#cerrarSesiones {
+    margin-top: 15px;
+    display: block;
+    background: linear-gradient(90deg, #5d17c5, #8b4bff);
+    color: #fff;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-left: auto;
+    margin-right: auto;
+    transition: 0.25s;
+}
+
+#cerrarSesiones:hover {
+    background: linear-gradient(90deg, #7b3ce9, #a278ff);
+    transform: scale(1.05);
+}
+
 
 /*LOGROS*/
 
@@ -1177,11 +1450,6 @@ body {
     transform: scale(1.1) rotate(10deg);
     background: var(--gradient-accent-highlight);
 }
-
-
-
-
-
 
 /* ========================================
    CONTACTO
@@ -1312,15 +1580,15 @@ body {
 
 .form-check {
     display: flex;
-    align-items: center; 
-    gap: 0.5rem;         
+    align-items: center;
+    gap: 0.5rem;
     margin-bottom: 1rem;
 }
 
 .form-check input[type="checkbox"] {
     width: 16px;
     height: 16px;
-    margin: 0;           
+    margin: 0;
 }
 
 .form-check label {
@@ -1350,6 +1618,7 @@ body {
     box-shadow: 0 12px 30px rgba(255, 97, 15, 0.5);
     background: var(--gradient-celeste-suave);
 }
+
 .btn-reclutamiento {
     font-weight: 600;
     padding: 10px 24px;
@@ -1363,10 +1632,11 @@ body {
 }
 
 .btn-reclutamiento:hover {
-    background: #FF610F; 
+    background: #FF610F;
     transform: translateY(-2px) scale(1.02);
     box-shadow: 0 8px 20px rgba(0, 123, 255, 0.5);
 }
+
 .reclutamiento-center {
     text-align: center;
     margin-top: 15px;
@@ -1381,7 +1651,7 @@ body {
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0,0,0,0.6);
+    background-color: rgba(0, 0, 0, 0.6);
 }
 
 .modal-content {
@@ -1441,9 +1711,12 @@ body {
 
 
 @keyframes float {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateY(0);
     }
+
     50% {
         transform: translateY(-20px);
     }
@@ -1473,16 +1746,17 @@ body {
 
 /* Tablets y móviles grandes (hasta 900px) */
 @media (max-width: 900px) {
+
     /* Navbar responsive */
     .nav-container {
         flex-wrap: wrap;
     }
-    
+
     nav {
         width: 100%;
         order: 3;
     }
-    
+
     .menu {
         display: none;
         flex-direction: column;
@@ -1493,64 +1767,64 @@ body {
         padding: 15px 0;
         gap: 0;
     }
-    
+
     .menu li {
         margin: 10px 0;
         width: 100%;
     }
-    
+
     .menu a {
         display: block;
         padding: 12px;
         font-size: 1.1em;
     }
-    
+
     .menu-icon {
         display: block;
     }
-    
-    .menu-toggle:checked ~ .navbar nav .menu {
+
+    .menu-toggle:checked~.navbar nav .menu {
         display: flex;
     }
-    
+
     .btn-hazte {
         display: block;
         width: 80%;
         margin: 10px auto;
         text-align: center;
     }
-    
+
     /* Topbar responsive */
     .topbar {
         padding: var(--spacing-xs) 20px;
     }
-    
+
     .topbar-right .email,
     .topbar-right .separator {
         display: none;
     }
-    
+
     /* Hero responsive */
     .hero {
         height: 100vh;
         min-height: 400px;
     }
-    
+
     .hero-text h1 {
         font-size: 2em;
     }
-    
+
     .hero-text p {
         font-size: 1em;
     }
-    
+
     /* Títulos de secciones */
     .titulo-eventos,
     .titulo-noticias,
     .formacion-header {
         flex-direction: column;
     }
-    
+
     .titulo-eventos h2,
     .titulo-noticias h2,
     .formacion-header h2 {
@@ -1560,14 +1834,14 @@ body {
         padding-right: 0;
         padding-bottom: 10px;
     }
-    
+
     .titulo-eventos p,
     .titulo-noticias p,
     .formacion-header p {
         padding-left: 0;
         padding-top: 10px;
     }
-    
+
     /* Carrusel responsive */
     .carousel-container {
         padding: 0 50px;
@@ -1578,27 +1852,27 @@ body {
         height: 40px;
         font-size: 1.2rem;
     }
-    
+
     .cards-junta {
         gap: 20px;
     }
-    
+
     .titulo-cargo {
         font-size: 1.6rem;
     }
-    
+
     /* CTA y Voluntariado */
     .cta,
     .voluntariado {
         padding: 80px 20px;
         border-radius: 20px;
     }
-    
+
     .cta h2,
     .voluntariado h2 {
         font-size: 2rem;
     }
-    
+
     .cta p,
     .voluntariado p {
         font-size: 1rem;
@@ -1608,110 +1882,111 @@ body {
 
 /* Móviles (hasta 768px) */
 @media (max-width: 768px) {
+
     /* Espaciados generales */
     :root {
         --spacing-lg: 25px;
         --spacing-xl: 50px;
         --spacing-2xl: 60px;
     }
-    
+
     /* Topbar */
     .topbar {
         padding: 8px 15px;
     }
-    
+
     .topbar-left a {
         font-size: 1em;
         margin-right: 8px;
     }
-    
+
     .topbar-right {
         font-size: 0.85em;
     }
-    
+
     /* Navbar */
     .navbar {
         padding: 10px 15px;
     }
-    
+
     .logo {
         height: 40px;
     }
-    
+
     /* Hero */
     .hero {
         height: 100vh;
         min-height: 350px;
     }
-    
+
     .hero-text h1 {
         font-size: 1.6em;
     }
-    
+
     .hero-text p {
         font-size: 0.95em;
     }
-    
+
     /* Quiénes somos */
     .quienes-somos h2 {
         font-size: 2em;
     }
-    
+
     .quienes-somos .descripcion {
         font-size: 1em;
     }
-    
+
     .card {
         max-width: 100%;
         padding: 30px 20px;
     }
-    
+
     /* Iconos */
     .icono-evento {
         width: 100px;
         height: 100px;
     }
-    
+
     .icono-evento i {
         font-size: 3rem;
     }
-    
+
     .icono-eje {
         width: 80px;
         height: 80px;
     }
-    
+
     .icono-eje i {
         font-size: 2.5rem;
     }
-    
+
     .foto-miembro-icon {
         width: 120px;
         height: 120px;
     }
-    
+
     .foto-miembro-icon i {
         font-size: 3rem;
     }
-    
+
     /* Tarjetas */
     .card-evento,
     .card-noticia,
     .card-formacion {
         max-width: 100%;
     }
-    
+
     .card-miembro {
         max-width: 100%;
         min-width: 180px;
         padding: 20px;
     }
-    
+
     .card-miembro img {
         width: 120px;
         height: 120px;
     }
-    
+
     /* Filtros */
     .filtros button,
     .filtros-noticias button,
@@ -1719,48 +1994,48 @@ body {
         padding: 10px 18px;
         font-size: 0.85em;
     }
-    
+
     /* Títulos */
     .titulo-eventos h2,
     .titulo-noticias h2,
     .formacion-header h2 {
         font-size: 1.8em;
     }
-    
+
     /* Carrusel */
     .carousel-container {
         padding: 0 40px;
     }
-    
+
     .titulo-cargo {
         font-size: 1.4rem;
     }
-    
+
     .carousel-btn {
         width: 35px;
         height: 35px;
         font-size: 1rem;
     }
-    
+
     /* Contacto */
     .titulo-contacto {
         font-size: 2.2em;
     }
-    
+
     .columna-imagen {
         min-height: 250px;
     }
-    
+
     .icono-contacto i {
         font-size: 6rem;
     }
-    
+
     /* CTA */
     .cta h2,
     .voluntariado h2 {
         font-size: 1.8rem;
     }
-    
+
     .btn-cta,
     .btn-vol {
         padding: 12px 28px;
@@ -1771,99 +2046,100 @@ body {
 
 /* Móviles pequeños (hasta 480px) */
 @media (max-width: 480px) {
+
     /* Hero */
     .hero {
         height: 100vh;
         min-height: 300px;
     }
-    
+
     .hero-text h1 {
         font-size: 1.4em;
     }
-    
+
     .hero-text p {
         font-size: 0.9em;
     }
-    
+
     /* Títulos principales */
     .quienes-somos h2 {
         font-size: 1.8em;
     }
-    
+
     .titulo-eventos h2,
     .titulo-noticias h2,
     .formacion-header h2 {
         font-size: 1.5em;
     }
-    
+
     .titulo-contacto {
         font-size: 1.8em;
     }
-    
+
     /* Carrusel */
     .carousel-container {
         padding: 0 35px;
     }
-    
+
     .carousel-btn {
         width: 30px;
         height: 30px;
         font-size: 0.9rem;
     }
-    
+
     .titulo-cargo {
         font-size: 1.2rem;
     }
-    
+
     .card-miembro {
         min-width: 150px;
         padding: 15px;
     }
-    
+
     .card-miembro h4 {
         font-size: 1rem;
     }
-    
+
     .card-miembro .cargo {
         font-size: 0.9rem;
     }
-    
+
     .card-miembro .descripcion-cargo {
         font-size: 0.85rem;
     }
-    
+
     /* Iconos más pequeños */
     .foto-miembro-icon {
         width: 100px;
         height: 100px;
     }
-    
+
     .foto-miembro-icon i {
         font-size: 2.5rem;
     }
-    
+
     .icono-evento {
         width: 80px;
         height: 80px;
     }
-    
+
     .icono-evento i {
         font-size: 2.5rem;
     }
-    
+
     .icono-eje {
         width: 70px;
         height: 70px;
     }
-    
+
     .icono-eje i {
         font-size: 2rem;
     }
-    
+
     .icono-contacto i {
         font-size: 5rem;
     }
-    
+
     /* Botones */
     .filtros button,
     .filtros-noticias button,
@@ -1871,29 +2147,29 @@ body {
         padding: 8px 16px;
         font-size: 0.8em;
     }
-    
+
     .btn-cta,
     .btn-vol {
         padding: 10px 24px;
         font-size: 0.9rem;
     }
-    
+
     /* CTA */
     .cta h2,
     .voluntariado h2 {
         font-size: 1.5rem;
     }
-    
+
     .cta p,
     .voluntariado p {
         font-size: 0.95rem;
     }
-    
+
     .cta,
     .voluntariado {
         padding: 60px 15px;
     }
-    
+
     /* Formulario */
     .form-contacto input,
     .form-contacto textarea,
@@ -1901,7 +2177,7 @@ body {
         padding: 10px;
         font-size: 0.95em;
     }
-    
+
     .columna-formulario {
         padding: 20px;
     }
@@ -1914,303 +2190,5 @@ body {
     .hero {
         height: 100vh;
         min-height: 400px;
-    }
-}
-
-
-
-
-
-/* ========================================
-   MODAL CALENDARIO PM LEARNING WEEK
-======================================== */
-
-/* Estilos específicos para el modal del calendario */
-.modal-calendario {
-    max-width: 1100px !important;
-    width: 95%;
-    padding: 40px 30px;
-    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
-    border: 3px solid var(--color-secondary);
-    box-shadow: 0 20px 60px rgba(63, 192, 240, 0.4);
-    max-height: 90vh;
-    overflow-y: auto;
-}
-
-/* Encabezado del evento */
-.modal-header-evento {
-    text-align: center;
-    margin-bottom: 30px;
-    padding-bottom: 20px;
-    border-bottom: 3px solid var(--color-secondary);
-}
-
-.modal-header-evento h3 {
-    color: var(--color-primary);
-    font-size: 2.2em;
-    font-weight: 800;
-    margin-bottom: 10px;
-    line-height: 1.3;
-}
-
-.modal-subtitle {
-    color: var(--color-secondary);
-    font-size: 1.3em;
-    font-weight: 600;
-    font-style: italic;
-}
-
-/* Imágenes horizontales (una al lado de la otra) */
-.calendario-images-horizontal {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    margin-bottom: 30px;
-}
-
-.calendario-images-horizontal img {
-    width: 100%;
-    height: auto;
-    border-radius: 15px;
-    box-shadow: 0 8px 25px rgba(79, 23, 168, 0.2);
-    transition: var(--transition-base);
-    cursor: pointer;
-}
-
-.calendario-images-horizontal img:hover {
-    transform: scale(1.03);
-    box-shadow: 0 12px 35px rgba(63, 192, 240, 0.4);
-}
-
-/* Descripción del evento */
-.evento-descripcion {
-    background: rgba(79, 23, 168, 0.05);
-    border-radius: 15px;
-    padding: 25px;
-    border-left: 5px solid var(--color-primary);
-}
-
-.intro-text {
-    color: var(--color-text-dark);
-    font-size: 1.1em;
-    line-height: 1.7;
-    margin-bottom: 25px;
-    text-align: justify;
-}
-
-/* Detalles del evento con iconos */
-.evento-detalles {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    margin-bottom: 25px;
-}
-
-.detalle-item {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    background: var(--color-white);
-    padding: 12px 18px;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-    transition: var(--transition-fast);
-}
-
-.detalle-item:hover {
-    transform: translateX(5px);
-    box-shadow: 0 4px 12px rgba(63, 192, 240, 0.2);
-}
-
-.detalle-item i {
-    font-size: 1.5em;
-    color: var(--color-secondary);
-    min-width: 30px;
-    text-align: center;
-}
-
-.detalle-item span {
-    color: var(--color-text-dark);
-    font-size: 1em;
-    line-height: 1.5;
-}
-
-.detalle-item strong {
-    color: var(--color-primary);
-    font-weight: 700;
-}
-
-/* Llamado a la acción */
-.evento-cta {
-    text-align: center;
-    margin-top: 30px;
-    padding-top: 25px;
-    border-top: 2px solid var(--color-secondary);
-}
-
-.cta-text {
-    font-size: 1.3em;
-    font-weight: 700;
-    color: var(--color-primary);
-    margin-bottom: 20px;
-}
-
-.btn-inscripcion-modal {
-    display: inline-block;
-    background: var(--gradient-celeste-suave);
-    color: var(--color-white);
-    font-weight: 700;
-    font-size: 1.2em;
-    padding: 16px 50px;
-    border-radius: 30px;
-    text-decoration: none;
-    box-shadow: var(--shadow-celeste);
-    transition: var(--transition-base);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.btn-inscripcion-modal:hover {
-    background: var(--gradient-naranja);
-    transform: translateY(-3px) scale(1.05);
-    box-shadow: var(--shadow-naranja);
-}
-
-/* Botón de cerrar mejorado */
-.modal-calendario .modal-close {
-    position: absolute;
-    top: 15px;
-    right: 20px;
-    font-size: 32px;
-    font-weight: bold;
-    color: var(--color-primary);
-    cursor: pointer;
-    transition: var(--transition-fast);
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    background: rgba(79, 23, 168, 0.1);
-    z-index: 10;
-}
-
-.modal-calendario .modal-close:hover {
-    background: var(--color-accent);
-    color: var(--color-white);
-    transform: rotate(90deg);
-}
-
-/* ========================================
-   RESPONSIVE PARA MODAL CALENDARIO
-======================================== */
-
-/* Tablets */
-@media (max-width: 768px) {
-    .modal-calendario {
-        padding: 30px 20px;
-        max-width: 95%;
-    }
-    
-    .modal-header-evento h3 {
-        font-size: 1.7em;
-    }
-    
-    .modal-subtitle {
-        font-size: 1.1em;
-    }
-    
-    /* Imágenes en columna en tablets */
-    .calendario-images-horizontal {
-        grid-template-columns: 1fr;
-        gap: 15px;
-    }
-    
-    .evento-descripcion {
-        padding: 20px;
-    }
-    
-    .intro-text {
-        font-size: 1em;
-    }
-    
-    .detalle-item {
-        padding: 10px 15px;
-    }
-    
-    .detalle-item i {
-        font-size: 1.3em;
-    }
-    
-    .btn-inscripcion-modal {
-        font-size: 1.1em;
-        padding: 14px 40px;
-    }
-}
-
-/* Móviles */
-@media (max-width: 480px) {
-    .modal-calendario {
-        padding: 20px 15px;
-        border-width: 2px;
-    }
-    
-    .modal-header-evento h3 {
-        font-size: 1.4em;
-    }
-    
-    .modal-subtitle {
-        font-size: 1em;
-    }
-    
-    .calendario-images-horizontal {
-        gap: 12px;
-    }
-    
-    .calendario-images-horizontal img {
-        border-radius: 10px;
-    }
-    
-    .evento-descripcion {
-        padding: 15px;
-    }
-    
-    .intro-text {
-        font-size: 0.95em;
-        text-align: left;
-    }
-    
-    .detalle-item {
-        flex-direction: row;
-        padding: 10px 12px;
-        gap: 10px;
-    }
-    
-    .detalle-item i {
-        font-size: 1.2em;
-        min-width: 25px;
-    }
-    
-    .detalle-item span {
-        font-size: 0.9em;
-    }
-    
-    .cta-text {
-        font-size: 1.1em;
-    }
-    
-    .btn-inscripcion-modal {
-        font-size: 1em;
-        padding: 12px 30px;
-        width: 100%;
-    }
-    
-    .modal-calendario .modal-close {
-        font-size: 28px;
-        width: 35px;
-        height: 35px;
-        top: 10px;
-        right: 10px;
     }
 }
