@@ -125,7 +125,6 @@ const form = document.getElementById("voluntarioForm");
         });
     }
 
-<<<<<<< HEAD
 // Enviar formulario
 form.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -175,12 +174,6 @@ document.addEventListener("keydown", (e) => {
 
 
 
-=======
-    // ----- FORMULARIO DE RECLUTAMIENTO DE VOLUNTARIOS -----
-    const btnReclutamiento = document.getElementById('btnReclutamiento');
-    const modalReclutamiento = document.getElementById('formModalReclutamiento');
-    const btnCerrarReclu = document.getElementById('btnCerrarReclu');
->>>>>>> 968f8111429b28f5af58207d95f285f23d0b5ae1
 
     if (btnReclutamiento && modalReclutamiento && btnCerrarReclu) {
         btnReclutamiento.addEventListener('click', () => {
