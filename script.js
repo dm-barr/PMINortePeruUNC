@@ -52,6 +52,9 @@ document.addEventListener("DOMContentLoaded", function() {
         video.playbackRate = 0.75; 
     }
 
+
+/*
+
     // ----- FORMULARIO DE VOLUNTARIADO EVENTOS(EMERGENTE) ----- (luego escala a google sheets)
 const btnInscribirse = document.getElementById("btnInscribirse");
 const formModal = document.getElementById("formModal");
@@ -81,6 +84,48 @@ form.addEventListener("submit", (e) => {
     form.reset();
     formModal.classList.add("oculto");
 });
+*/
+
+
+
+// ========================================
+// ✅ NUEVO MODAL: CALENDARIO PM LEARNING WEEK
+// ========================================
+const btnCalendario = document.getElementById("btnCalendario");
+const modalCalendario = document.getElementById("modalCalendario");
+const btnCerrarCalendario = document.getElementById("btnCerrarCalendario");
+
+// Asegurarse de que el modal esté oculto al cargar
+modalCalendario.classList.add("oculto");
+
+// Abrir modal al hacer clic en "Ver Calendario"
+btnCalendario.addEventListener("click", () => {
+    modalCalendario.classList.remove("oculto");
+});
+
+// Cerrar modal con el botón X
+btnCerrarCalendario.addEventListener("click", () => {
+    modalCalendario.classList.add("oculto");
+});
+
+// Cerrar modal al hacer clic fuera del contenido
+modalCalendario.addEventListener("click", (e) => {
+    if (e.target === modalCalendario) {
+        modalCalendario.classList.add("oculto");
+    }
+});
+
+// Cerrar modal con la tecla ESC
+document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && !modalCalendario.classList.contains("oculto")) {
+        modalCalendario.classList.add("oculto");
+    }
+});
+
+
+
+
+
 
 // ----- FORMULARIO DE RECLUTAMIENTO DE VOLUNTARIOS (EMERGENTE) -----
 const btnReclutamiento = document.getElementById('btnReclutamiento');
