@@ -1114,82 +1114,75 @@ body {
 }
 
 
-
-
-
-
-
-
-
 /* ========================================
    eventos */
 
 /* 🔹 SECCIÓN PM LEARNING */
 .pm-learning {
-  font-family: 'Open Sans', sans-serif;
-  text-align: center;
-  margin-top: 80px;
-  border-radius: 30px;
-  overflow: hidden;
-  box-shadow: 0 0 15px rgba(0,0,0,0.15);
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    margin-top: 80px;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
 }
 
 /* Parte superior blanca */
 .pm-top {
-  background: #fff;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 60px 80px;
-  flex-wrap: wrap;
-  border-top-left-radius: 30px;
-  border-top-right-radius: 30px;
-  position: relative;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 80px;
+    flex-wrap: wrap;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    position: relative;
 }
 
 .pm-top-left {
-  text-align: left;
+    text-align: left;
 }
 
 .pm-top-left h2 {
-  color: #6A0DAD;
-  font-size: 3.5rem;
-  font-weight: 800;
-  line-height: 1.1;
+    color: #6A0DAD;
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1.1;
 }
 
 .pm-top-left h3 {
-  display: block;
-  color: #FF610F;
-  font-size: 1.5rem;
+    display: block;
+    color: #FF610F;
+    font-size: 1.5rem;
 }
 
 .pm-top-left p {
-  font-size: 1.5rem;
-  color: #6A0DAD;
-  font-weight: 700;
-  margin: 15px 0 25px;
+    font-size: 1.5rem;
+    color: #6A0DAD;
+    font-weight: 700;
+    margin: 15px 0 25px;
 }
 
 
 /* Imagen logo */
 .pm-top-right img {
-  width: 300px;
-  height: auto;
-  object-fit: contain;
-  position: absolute;
-  top: 7%;
-  right: 60px;
+    width: 300px;
+    height: auto;
+    object-fit: contain;
+    position: absolute;
+    top: 7%;
+    right: 60px;
 }
 
 /* Parte inferior */
 .pm-bottom {
-  position: relative;
-  background: url("img/logo/unc.jpg") center/cover no-repeat;
-  padding: 70px 20px 100px;
-  border-top: 2px solid #fff;
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
+    position: relative;
+    background: url("img/logo/unc.jpg") center/cover no-repeat;
+    padding: 70px 20px 100px;
+    border-top: 2px solid #fff;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
 }
 
 .overlay {
@@ -1204,61 +1197,61 @@ body {
 
 /* Tarjetas */
 .contenido {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: stretch;
-  gap: 25px;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 25px;
 }
 
 .card-info {
-  background: #fff;
-  border-radius: 25px;
-  padding: 45px 35px;
-  width: 380px;
-  max-width: 95%;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+    background: #fff;
+    border-radius: 25px;
+    padding: 45px 35px;
+    width: 380px;
+    max-width: 95%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 /* Títulos */
-.card-info h3{
-  color: #ff6200;
-  margin-bottom: 20px;
-  font-size: 1.9rem;
-  font-weight: 800;
-  text-transform: uppercase;
+.card-info h3 {
+    color: #ff6200;
+    margin-bottom: 20px;
+    font-size: 1.9rem;
+    font-weight: 800;
+    text-transform: uppercase;
 }
 
 /* Texto */
 .card-info p {
-  color: #6A0DAD;
-  font-size: 1.05rem;
-  line-height: 1.8;
-  font-weight: 500;
-  text-align: center;
-  margin: 0 auto;
+    color: #6A0DAD;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    font-weight: 500;
+    text-align: center;
+    margin: 0 auto;
 }
 
 .card-info p strong {
-  color: #6A0DAD;
-  font-weight: 800;
+    color: #6A0DAD;
+    font-weight: 800;
 }
 
 /* 🔸 BOTONES INFERIORES */
 .pm-buttons {
-  position: relative;
-  z-index: 1;
-  margin-top: 50px;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 .btn-inscribete {
@@ -1291,19 +1284,6 @@ body {
     background: rgba(255, 255, 255, 0.15);
     transform: scale(1.05);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1361,6 +1341,89 @@ body {
     background: var(--gradient-naranja);
 }
 
+/*SESIONES*/
+.hidden { display: none !important; }
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(20, 0, 40, 0.7);
+    /* morado oscuro transparente */
+    z-index: 999;
+}
+
+/* Ventana emergente */
+#ventanaSesiones {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.95);
+    background: linear-gradient(135deg, #f8f6ff, #ebe3ff);
+    border: 2px solid #5d17c5;
+    padding: 25px 30px;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(93, 23, 197, 0.3);
+    max-width: 600px;
+    width: 90%;
+    z-index: 1000;
+    overflow-y: auto;
+    transition: all 0.25s ease;
+}
+
+#ventanaSesiones:not(.hidden) {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* Título */
+#ventanaSesiones h2 {
+    color: #5d17c5;
+    font-weight: 700;
+    margin-bottom: 18px;
+    text-align: center;
+}
+
+/* Lista */
+#ventanaSesiones ul {
+    list-style: none;
+    padding: 0;
+}
+
+#ventanaSesiones li {
+    margin-bottom: 15px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.6);
+    border-left: 4px solid #5d17c5;
+    border-radius: 8px;
+    color: #3c216d;
+    line-height: 1.5;
+}
+
+/* Botón cerrar */
+#cerrarSesiones {
+    margin-top: 15px;
+    display: block;
+    background: linear-gradient(90deg, #5d17c5, #8b4bff);
+    color: #fff;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-left: auto;
+    margin-right: auto;
+    transition: 0.25s;
+}
+
+#cerrarSesiones:hover {
+    background: linear-gradient(90deg, #7b3ce9, #a278ff);
+    transform: scale(1.05);
+}
+
+
 /*LOGROS*/
 
 .icono-logro {
@@ -1387,11 +1450,6 @@ body {
     transform: scale(1.1) rotate(10deg);
     background: var(--gradient-accent-highlight);
 }
-
-
-
-
-
 
 /* ========================================
    CONTACTO
