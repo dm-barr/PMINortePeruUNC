@@ -52,8 +52,6 @@ document.addEventListener("DOMContentLoaded", function () {
         // setInterval(() => moveCarousel(1), 5000);
     }
 
-<<<<<<< HEAD
-=======
     function moveCarousel(direction) {
         currentSlide += direction;
         if (currentSlide < 0) currentSlide = totalSlides - 1;
@@ -81,20 +79,17 @@ document.addEventListener("DOMContentLoaded", function () {
     // Auto-avance opcional (cada 5 segundos)
     // setInterval(() => moveCarousel(1), 5000);
 
->>>>>>> 2e28e8b0d28c0744e713bb42f538d04dba8d3497
     // ----- VIDEO -----
     const video = document.querySelector(".hero-video");
     if (video) {
         video.playbackRate = 0.75;
     }
 
-<<<<<<< HEAD
     // ----- MODAL DE SESIONES -----
     const btnSesiones = document.querySelector(".btn-sesiones");
     const ventanaSesiones = document.getElementById("ventanaSesiones");
     const overlay = document.getElementById("overlay");
     const btnCerrar = document.getElementById("cerrarSesiones");
-=======
 
 /*
 
@@ -103,7 +98,6 @@ const btnInscribirse = document.getElementById("btnInscribirse");
 const formModal = document.getElementById("formModal");
 const btnCerrarForm = document.getElementById("btnCerrarForm");
 const form = document.getElementById("voluntarioForm");
->>>>>>> 2e28e8b0d28c0744e713bb42f538d04dba8d3497
 
     // Mostrar ventana
     btnSesiones.addEventListener("click", (e) => {
@@ -155,12 +149,10 @@ const form = document.getElementById("voluntarioForm");
         });
     }
 
-<<<<<<< HEAD
     // ----- FORMULARIO DE RECLUTAMIENTO DE VOLUNTARIOS -----
     const btnReclutamiento = document.getElementById('btnReclutamiento');
     const modalReclutamiento = document.getElementById('formModalReclutamiento');
     const btnCerrarReclu = document.getElementById('btnCerrarReclu');
-=======
 // Enviar formulario
 form.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -210,7 +202,6 @@ document.addEventListener("keydown", (e) => {
 
 
 
->>>>>>> 2e28e8b0d28c0744e713bb42f538d04dba8d3497
 
     if (btnReclutamiento && modalReclutamiento && btnCerrarReclu) {
         btnReclutamiento.addEventListener('click', () => {
