@@ -58,6 +58,31 @@ document.addEventListener("DOMContentLoaded", function () {
         video.playbackRate = 0.75;
     }
 
+    // ----- MODAL DE SESIONES -----
+    const btnSesiones = document.querySelector(".btn-sesiones");
+    const ventanaSesiones = document.getElementById("ventanaSesiones");
+    const overlay = document.getElementById("overlay");
+    const btnCerrar = document.getElementById("cerrarSesiones");
+
+    // Mostrar ventana
+    btnSesiones.addEventListener("click", (e) => {
+        e.preventDefault(); // Evita el salto del enlace
+        ventanaSesiones.classList.remove("hidden");
+        overlay.classList.remove("hidden");
+    });
+
+    // Cerrar ventana
+    btnCerrar.addEventListener("click", () => {
+        ventanaSesiones.classList.add("hidden");
+        overlay.classList.add("hidden");
+    });
+
+    // Cerrar al hacer clic fuera del modal
+    overlay.addEventListener("click", () => {
+        ventanaSesiones.classList.add("hidden");
+        overlay.classList.add("hidden");
+    });
+
     // ----- FORMULARIO DE VOLUNTARIADO EVENTOS -----
     const btnInscribirse = document.getElementById("btnInscribirse");
     const formModal = document.getElementById("formModal");
