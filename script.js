@@ -2,96 +2,95 @@
 // CARRUSEL DE JUNTA DIRECTIVA + VIDEO + MODALES
 // ========================================
 document.addEventListener("DOMContentLoaded", function () {
+  // ----- CARRUSEL -----
+  const track = document.getElementById("carouselTrack");
+  const slides = document.querySelectorAll(".carousel-slide");
+  const totalSlides = slides.length;
+  let currentSlide = 0;
 
-    // ----- CARRUSEL -----
-    const track = document.getElementById('carouselTrack');
-    const slides = document.querySelectorAll('.carousel-slide');
-    const totalSlides = slides.length;
-    let currentSlide = 0;
-
-    if (track && slides.length > 0) {
-        // Crear indicadores
-        const indicatorsContainer = document.getElementById('carouselIndicators');
-        if (indicatorsContainer) {
-            for (let i = 0; i < totalSlides; i++) {
-                const indicator = document.createElement('div');
-                indicator.classList.add('carousel-indicator');
-                if (i === 0) indicator.classList.add('active');
-                indicator.onclick = () => goToSlide(i);
-                indicatorsContainer.appendChild(indicator);
-            }
-        }
-
-        function moveCarousel(direction) {
-            currentSlide += direction;
-            if (currentSlide < 0) currentSlide = totalSlides - 1;
-            else if (currentSlide >= totalSlides) currentSlide = 0;
-            updateCarousel();
-        }
-
-        function goToSlide(index) {
-            currentSlide = index;
-            updateCarousel();
-        }
-
-        function updateCarousel() {
-            const offset = -currentSlide * 100;
-            track.style.transform = `translateX(${offset}%)`;
-
-            // Actualizar indicadores
-            const indicators = document.querySelectorAll('.carousel-indicator');
-            indicators.forEach((indicator, index) => {
-                indicator.classList.toggle('active', index === currentSlide);
-            });
-        }
-
-        window.moveCarousel = moveCarousel;
-        window.goToSlide = goToSlide;
-
-        // Auto-avance opcional (cada 5 segundos)
-        // setInterval(() => moveCarousel(1), 5000);
+  if (track && slides.length > 0) {
+    // Crear indicadores
+    const indicatorsContainer = document.getElementById("carouselIndicators");
+    if (indicatorsContainer) {
+      for (let i = 0; i < totalSlides; i++) {
+        const indicator = document.createElement("div");
+        indicator.classList.add("carousel-indicator");
+        if (i === 0) indicator.classList.add("active");
+        indicator.onclick = () => goToSlide(i);
+        indicatorsContainer.appendChild(indicator);
+      }
     }
 
     function moveCarousel(direction) {
-        currentSlide += direction;
-        if (currentSlide < 0) currentSlide = totalSlides - 1;
-        else if (currentSlide >= totalSlides) currentSlide = 0;
-        updateCarousel();
+      currentSlide += direction;
+      if (currentSlide < 0) currentSlide = totalSlides - 1;
+      else if (currentSlide >= totalSlides) currentSlide = 0;
+      updateCarousel();
     }
 
     function goToSlide(index) {
-        currentSlide = index;
-        updateCarousel();
+      currentSlide = index;
+      updateCarousel();
     }
 
     function updateCarousel() {
-        const offset = -currentSlide * 100;
-        track.style.transform = `translateX(${offset}%)`;
-        
-        // Actualizar indicadores
-        const indicators = document.querySelectorAll('.carousel-indicator');
-        indicators.forEach((indicator, index) => {
-            indicator.classList.toggle('active', index === currentSlide);
-        });
+      const offset = -currentSlide * 100;
+      track.style.transform = `translateX(${offset}%)`;
+
+      // Actualizar indicadores
+      const indicators = document.querySelectorAll(".carousel-indicator");
+      indicators.forEach((indicator, index) => {
+        indicator.classList.toggle("active", index === currentSlide);
+      });
     }
+
     window.moveCarousel = moveCarousel;
     window.goToSlide = goToSlide;
+
     // Auto-avance opcional (cada 5 segundos)
     // setInterval(() => moveCarousel(1), 5000);
+  }
 
-    // ----- VIDEO -----
-    const video = document.querySelector(".hero-video");
-    if (video) {
-        video.playbackRate = 0.75;
-    }
+  function moveCarousel(direction) {
+    currentSlide += direction;
+    if (currentSlide < 0) currentSlide = totalSlides - 1;
+    else if (currentSlide >= totalSlides) currentSlide = 0;
+    updateCarousel();
+  }
 
-    // ----- MODAL DE SESIONES -----
-    const btnSesiones = document.querySelector(".btn-sesiones");
-    const ventanaSesiones = document.getElementById("ventanaSesiones");
-    const overlay = document.getElementById("overlay");
-    const btnCerrar = document.getElementById("cerrarSesiones");
+  function goToSlide(index) {
+    currentSlide = index;
+    updateCarousel();
+  }
 
-/*
+  function updateCarousel() {
+    const offset = -currentSlide * 100;
+    track.style.transform = `translateX(${offset}%)`;
+
+    // Actualizar indicadores
+    const indicators = document.querySelectorAll(".carousel-indicator");
+    indicators.forEach((indicator, index) => {
+      indicator.classList.toggle("active", index === currentSlide);
+    });
+  }
+  window.moveCarousel = moveCarousel;
+  window.goToSlide = goToSlide;
+  // Auto-avance opcional (cada 5 segundos)
+  // setInterval(() => moveCarousel(1), 5000);
+
+  // ----- VIDEO -----
+  const video = document.querySelector(".hero-video");
+  if (video) {
+    video.playbackRate = 0.75;
+  }
+
+  // ----- MODAL DE SESIONES -----
+  const btnSesiones = document.querySelector(".btn-sesiones");
+  const ventanaSesiones = document.getElementById("ventanaSesiones");
+  const overlay = document.getElementById("overlay");
+  const btnCerrar = document.getElementById("cerrarSesiones");
+
+  /*
 
     // ----- FORMULARIO DE VOLUNTARIADO EVENTOS(EMERGENTE) ----- (luego escala a google sheets)
 const btnInscribirse = document.getElementById("btnInscribirse");
@@ -143,7 +142,7 @@ const form = document.getElementById("voluntarioForm");
 
         form.addEventListener("submit", (e) => {
             e.preventDefault();
-            alert("¡Gracias por inscribirte! Pronto nos pondremos en contacto contigo.");
+            alert("Â¡Gracias por inscribirte! Pronto nos pondremos en contacto contigo.");
             form.reset();
             formModal.classList.add("oculto");
         });
@@ -156,67 +155,59 @@ const form = document.getElementById("voluntarioForm");
 // Enviar formulario
 form.addEventListener("submit", (e) => {
     e.preventDefault();
-    alert("¡Gracias por inscribirte! Pronto nos pondremos en contacto contigo.");
+    alert("Â¡Gracias por inscribirte! Pronto nos pondremos en contacto contigo.");
     form.reset();
     formModal.classList.add("oculto");
 });
 */
 
+  // ========================================
+  // âœ… NUEVO MODAL: CALENDARIO PM LEARNING WEEK
+  // ========================================
+  const btnCalendario = document.getElementById("btnCalendario");
+  const modalCalendario = document.getElementById("modalCalendario");
+  const btnCerrarCalendario = document.getElementById("btnCerrarCalendario");
 
+  // Asegurarse de que el modal estÃ© oculto al cargar
+  modalCalendario.classList.add("oculto");
 
-// ========================================
-// ✅ NUEVO MODAL: CALENDARIO PM LEARNING WEEK
-// ========================================
-const btnCalendario = document.getElementById("btnCalendario");
-const modalCalendario = document.getElementById("modalCalendario");
-const btnCerrarCalendario = document.getElementById("btnCerrarCalendario");
-
-// Asegurarse de que el modal esté oculto al cargar
-modalCalendario.classList.add("oculto");
-
-// Abrir modal al hacer clic en "Ver Calendario"
-btnCalendario.addEventListener("click", () => {
+  // Abrir modal al hacer clic en "Ver Calendario"
+  btnCalendario.addEventListener("click", () => {
     modalCalendario.classList.remove("oculto");
-});
+  });
 
-// Cerrar modal con el botón X
-btnCerrarCalendario.addEventListener("click", () => {
+  // Cerrar modal con el botÃ³n X
+  btnCerrarCalendario.addEventListener("click", () => {
     modalCalendario.classList.add("oculto");
-});
+  });
 
-// Cerrar modal al hacer clic fuera del contenido
-modalCalendario.addEventListener("click", (e) => {
+  // Cerrar modal al hacer clic fuera del contenido
+  modalCalendario.addEventListener("click", (e) => {
     if (e.target === modalCalendario) {
-        modalCalendario.classList.add("oculto");
+      modalCalendario.classList.add("oculto");
     }
-});
+  });
 
-// Cerrar modal con la tecla ESC
-document.addEventListener("keydown", (e) => {
+  // Cerrar modal con la tecla ESC
+  document.addEventListener("keydown", (e) => {
     if (e.key === "Escape" && !modalCalendario.classList.contains("oculto")) {
-        modalCalendario.classList.add("oculto");
+      modalCalendario.classList.add("oculto");
     }
-});
+  });
 
+  if (btnReclutamiento && modalReclutamiento && btnCerrarReclu) {
+    btnReclutamiento.addEventListener("click", () => {
+      modalReclutamiento.classList.remove("oculto");
+    });
 
+    btnCerrarReclu.addEventListener("click", () => {
+      modalReclutamiento.classList.add("oculto");
+    });
 
-
-
-
-    if (btnReclutamiento && modalReclutamiento && btnCerrarReclu) {
-        btnReclutamiento.addEventListener('click', () => {
-            modalReclutamiento.classList.remove('oculto');
-        });
-
-        btnCerrarReclu.addEventListener('click', () => {
-            modalReclutamiento.classList.add('oculto');
-        });
-
-        window.addEventListener('click', (e) => {
-            if (e.target === modalReclutamiento) {
-                modalReclutamiento.classList.add('oculto');
-            }
-        });
-    }
-
+    window.addEventListener("click", (e) => {
+      if (e.target === modalReclutamiento) {
+        modalReclutamiento.classList.add("oculto");
+      }
+    });
+  }
 });

@@ -1,5 +1,5 @@
 /* ========================================
-   VARIABLES Y CONFIGURACIÓN GLOBAL
+   VARIABLES Y CONFIGURACIÃ“N GLOBAL
 ======================================== */
 :root {
     /* Colores principales */
@@ -125,7 +125,7 @@ body {
 
 
 /* ========================================
-   NAVBAR PRINCIPAL CON MENÚ HAMBURGUESA
+   NAVBAR PRINCIPAL CON MENÃš HAMBURGUESA
 ======================================== */
 .menu-toggle {
     display: none;
@@ -288,7 +288,7 @@ body {
 
 
 /* ========================================
-   QUIÉNES SOMOS
+   QUIÃ‰NES SOMOS
 ======================================== */
 .quienes-somos {
     background: var(--color-light-bg);
@@ -423,7 +423,7 @@ body {
 }
 
 
-/* Títulos de secciones */
+/* TÃ­tulos de secciones */
 .titulo-eventos,
 .titulo-noticias,
 .formacion-header {
@@ -644,7 +644,7 @@ body {
 
 
 /* ========================================
-   FORMACIÓN ESPECÍFICA
+   FORMACIÃ“N ESPECÃFICA
 ======================================== */
 .btn-card {
     display: inline-block;
@@ -1117,7 +1117,7 @@ body {
 /* ========================================
    eventos */
 
-/* 🔹 SECCIÓN PM LEARNING */
+/* ðŸ”¹ SECCIÃ“N PM LEARNING */
 .pm-learning {
     font-family: 'Open Sans', sans-serif;
     text-align: center;
@@ -1219,7 +1219,7 @@ body {
     justify-content: center;
 }
 
-/* Títulos */
+/* TÃ­tulos */
 .card-info h3 {
     color: #ff6200;
     margin-bottom: 20px;
@@ -1243,7 +1243,7 @@ body {
     font-weight: 800;
 }
 
-/* 🔸 BOTONES INFERIORES */
+/* ðŸ”¸ BOTONES INFERIORES */
 .pm-buttons {
     position: relative;
     z-index: 1;
@@ -1377,7 +1377,7 @@ body {
     transform: translate(-50%, -50%) scale(1);
 }
 
-/* Título */
+/* TÃ­tulo */
 #ventanaSesiones h2 {
     color: #5d17c5;
     font-weight: 700;
@@ -1401,7 +1401,7 @@ body {
     line-height: 1.5;
 }
 
-/* Botón cerrar */
+/* BotÃ³n cerrar */
 #cerrarSesiones {
     margin-top: 15px;
     display: block;
@@ -1744,7 +1744,7 @@ body {
 ======================================== */
 
 
-/* Tablets y móviles grandes (hasta 900px) */
+/* Tablets y mÃ³viles grandes (hasta 900px) */
 @media (max-width: 900px) {
 
     /* Navbar responsive */
@@ -1818,7 +1818,7 @@ body {
         font-size: 1em;
     }
 
-    /* Títulos de secciones */
+    /* TÃ­tulos de secciones */
     .titulo-eventos,
     .titulo-noticias,
     .formacion-header {
@@ -1880,7 +1880,7 @@ body {
 }
 
 
-/* Móviles (hasta 768px) */
+/* MÃ³viles (hasta 768px) */
 @media (max-width: 768px) {
 
     /* Espaciados generales */
@@ -1927,7 +1927,7 @@ body {
         font-size: 0.95em;
     }
 
-    /* Quiénes somos */
+    /* QuiÃ©nes somos */
     .quienes-somos h2 {
         font-size: 2em;
     }
@@ -1995,7 +1995,7 @@ body {
         font-size: 0.85em;
     }
 
-    /* Títulos */
+    /* TÃ­tulos */
     .titulo-eventos h2,
     .titulo-noticias h2,
     .formacion-header h2 {
@@ -2044,7 +2044,7 @@ body {
 }
 
 
-/* Móviles pequeños (hasta 480px) */
+/* MÃ³viles pequeÃ±os (hasta 480px) */
 @media (max-width: 480px) {
 
     /* Hero */
@@ -2061,7 +2061,7 @@ body {
         font-size: 0.9em;
     }
 
-    /* Títulos principales */
+    /* TÃ­tulos principales */
     .quienes-somos h2 {
         font-size: 1.8em;
     }
@@ -2108,7 +2108,7 @@ body {
         font-size: 0.85rem;
     }
 
-    /* Iconos más pequeños */
+    /* Iconos mÃ¡s pequeÃ±os */
     .foto-miembro-icon {
         width: 100px;
         height: 100px;
@@ -2185,7 +2185,7 @@ body {
 }
 
 
-/* Landscape en móviles */
+/* Landscape en mÃ³viles */
 @media (max-width: 900px) and (orientation: landscape) {
     .hero {
         height: 100vh;
@@ -2198,7 +2198,7 @@ body {
    MODAL CALENDARIO PM LEARNING WEEK
 ======================================== */
 
-/* Estilos específicos para el modal del calendario */
+/* Estilos especÃ­ficos para el modal del calendario */
 .modal-calendario {
     max-width: 1100px !important;
     width: 95%;
@@ -2233,7 +2233,7 @@ body {
     font-style: italic;
 }
 
-/* Imágenes horizontales (una al lado de la otra) */
+/* ImÃ¡genes horizontales (una al lado de la otra) */
 .calendario-images-horizontal {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -2255,7 +2255,7 @@ body {
     box-shadow: 0 12px 35px rgba(63, 192, 240, 0.4);
 }
 
-/* Descripción del evento */
+/* DescripciÃ³n del evento */
 .evento-descripcion {
     background: rgba(79, 23, 168, 0.05);
     border-radius: 15px;
@@ -2313,7 +2313,7 @@ body {
     font-weight: 700;
 }
 
-/* Llamado a la acción */
+/* Llamado a la acciÃ³n */
 .evento-cta {
     text-align: center;
     margin-top: 30px;
@@ -2349,7 +2349,7 @@ body {
     box-shadow: var(--shadow-naranja);
 }
 
-/* Botón de cerrar mejorado */
+/* BotÃ³n de cerrar mejorado */
 .modal-calendario .modal-close {
     position: absolute;
     top: 15px;
@@ -2394,7 +2394,7 @@ body {
         font-size: 1.1em;
     }
     
-    /* Imágenes en columna en tablets */
+    /* ImÃ¡genes en columna en tablets */
     .calendario-images-horizontal {
         grid-template-columns: 1fr;
         gap: 15px;
@@ -2422,7 +2422,7 @@ body {
     }
 }
 
-/* Móviles */
+/* MÃ³viles */
 @media (max-width: 480px) {
     .modal-calendario {
         padding: 20px 15px;
