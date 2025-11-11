@@ -1133,7 +1133,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 60px 80px;
+    padding: 10px 80px;
     flex-wrap: wrap;
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
@@ -1151,17 +1151,17 @@ body {
     line-height: 1.1;
 }
 
-.pm-top-left h3 {
+/*.pm-top-left h3 {
     display: block;
     color: #FF610F;
     font-size: 1.5rem;
-}
+}*/
 
 .pm-top-left p {
     font-size: 1.5rem;
     color: #6A0DAD;
     font-weight: 700;
-    margin: 15px 0 25px;
+    margin: 5px 0 5px;
 }
 
 
@@ -1171,7 +1171,7 @@ body {
     height: auto;
     object-fit: contain;
     position: absolute;
-    top: 7%;
+    top: 21px;
     right: 60px;
 }
 
