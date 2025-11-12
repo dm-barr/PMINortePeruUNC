@@ -83,10 +83,7 @@ document.addEventListener("DOMContentLoaded", function () {
         overlay.classList.add("hidden");
     });
 
-    // ----- URL DEL SCRIPT DE GOOGLE FORMS -----
-    const scriptURL_Eventos = 'https://script.google.com/macros/s/AKfycbw8zBd1Lt0MCVJ3RIXjTUe3Ekxys_NTj8avfu9I2xIiWPoxL0qyL4VOZ_5-2sY16EhuHw/exec';
-
-    // ----- FORMULARIO DE EVENTOS -----
+    // ----- FORMULARIO DE VOLUNTARIADO EVENTOS -----
     const btnInscribirse = document.getElementById("btnInscribirse");
     const formModal = document.getElementById("formModal");
     const btnCerrarForm = document.getElementById("btnCerrarForm");
@@ -111,14 +108,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
         form.addEventListener("submit", (e) => {
             e.preventDefault();
-            const submitButton = form.querySelector('button[type="submit"]');
-            submitButton.disabled = true;
-            fetch(scriptURL_Eventos, { method: 'POST', body: new FormData(form) })
-                .finally(() => {
-                    form.reset();
-                    formModal.classList.add("oculto");
-                    submitButton.disabled = false;
-                });
+            alert("¡Gracias por inscribirte! Pronto nos pondremos en contacto contigo.");
+            form.reset();
+            formModal.classList.add("oculto");
         });
     }
 

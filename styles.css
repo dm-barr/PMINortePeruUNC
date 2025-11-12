@@ -668,7 +668,7 @@ body {
 
 
 /* ========================================
-   CTA Y VOLUNTARIADO
+   CTA Y VOLUNTARIADO - Logros 
 ======================================== */
 .cta,
 .voluntariado,
@@ -704,7 +704,9 @@ body {
     background-image: url("../img/recursos/morado.png");
 }
 
-
+/* ========================================
+   Logros contenido 
+======================================== */
 .cta-fondo {
     position: absolute;
     top: 50%;
@@ -747,7 +749,9 @@ body {
     margin-right: auto;
 }
 
-
+/* ========================================
+    Logros botones 
+======================================== */
 .cta-buttons,
 .voluntariado-buttons,
 .logro-buttons {

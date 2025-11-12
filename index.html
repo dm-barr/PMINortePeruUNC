@@ -519,7 +519,7 @@
                     </div>
 
                     <div class="pm-buttons">
-                        <a href="#" class="btn-inscribete">INSCRÍBETE AHORA</a>
+                        <a href="https://forms.gle/hACgATdRRq7acG5S9" target="_blank" class="btn-inscribete">INSCRÍBETE AHORA</a>
                         <a href="#" class="btn-sesiones">VER SESIONES</a>
                     </div>
                 </div>
@@ -581,20 +581,31 @@
         </div>
     </section>    -->
 
-    <!-- FORMULARIO DE PARA EVENTOS -->
+    <!-- FORMULARIO DE VOLUNTARIADO PARA EVENTOS -->
     <div id="formModal" class="modal oculto">
         <div class="modal-content">
-            <h3>REGISTRO OFICIAL - PM LEARNING </h3>
-            
+            <h3>Formulario de Voluntariado</h3>
             <form id="voluntarioForm">
-                <label for="nombre">NOMBRE COMPLETO:</label>
+                <label for="nombre">Nombre completo:</label>
                 <input type="text" id="nombre" name="nombre" required>
 
-                <label for="correo">CORREO ELECTRÓNICO:</label>
+                <label for="correo">Correo electrónico:</label>
                 <input type="email" id="correo" name="correo" required>
 
-                <label for="telefono">NÚMERO DE WHATSAPP:</label>
-                <input type="tel" id="telefono" name="telefono" required>
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono">
+
+                <label for="interes">Área de interés:</label>
+                <select id="interes" name="interes" required>
+                    <option value="">Selecciona una opción</option>
+                    <option value="logistica">Logística</option>
+                    <option value="difusion">Difusión y redes</option>
+                    <option value="contenido">Creación de contenido</option>
+                    <option value="apoyo">Apoyo general</option>
+                </select>
+
+                <label for="mensaje">¿Por qué te gustaría participar?</label>
+                <textarea id="mensaje" name="mensaje" rows="4"></textarea>
 
                 <div class="form-buttons">
                     <button type="submit" class="btn-vol btn-azul">Enviar</button>
@@ -762,38 +773,21 @@
 
 
     <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbzwhxwGQSMcUCj1MCVrCsuPICbfQch3A2N3mZkfxc6krkgqUU9PxFiBc0NG702OG4AH/exec';
-
-
-        document.getElementById('contactForm').addEventListener('submit', e => {
-            e.preventDefault();
-
-
-            const formData = {
-                nombre: document.getElementById('nombre').value,
-                email: document.getElementById('email').value,
-                carrera: document.getElementById('carrera').value,
-                telefono: document.getElementById('telefono').value,
-                codigo: document.getElementById('codigo').value,
-                areaInteres: document.getElementById('area-interes').value,
-                mensaje: document.getElementById('mensaje').value
-            };
-
-
-            fetch(scriptURL, {
-                method: 'POST',
-                mode: 'no-cors',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(formData)
-            })
-                .then(() => {
-                    alert('✅ Tu mensaje ha sido enviado correctamente.');
-                    document.getElementById('contactForm').reset();
-                })
-                .catch(error => alert('❌ Error de conexión: ' + error.message));
-        });
+    const scriptURL_Contacto = 'https://script.google.com/macros/s/AKfycbw8zBd1Lt0MCVJ3RIXjTUe3Ekxys_NTj8avfu9I2xIiWPoxL0qyL4VOZ_5-2sY16EhuHw/exec';
+    const contactForm = document.getElementById('contactForm'); //
+    contactForm.addEventListener('submit', e => {
+        e.preventDefault();
+        const submitButton = contactForm.querySelector('button[type="submit"]');
+        submitButton.disabled = true;
+        submitButton.textContent = 'Enviando...';
+        fetch(scriptURL_Contacto, { method: 'POST', body: new FormData(contactForm) })
+            .finally(() => {
+                contactForm.reset();
+                submitButton.disabled = false;
+                submitButton.textContent = 'Enviar';
+            });
+    });
     </script>
-
 
 
 
