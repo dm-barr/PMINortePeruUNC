@@ -38,17 +38,13 @@ document.addEventListener("DOMContentLoaded", function () {
         function updateCarousel() {
             const offset = -currentSlide * 100;
             track.style.transform = `translateX(${offset}%)`;
-
-            
             const indicators = document.querySelectorAll('.carousel-indicator');
             indicators.forEach((indicator, index) => {
                 indicator.classList.toggle('active', index === currentSlide);
             });
         }
-
         window.moveCarousel = moveCarousel;
         window.goToSlide = goToSlide;
-
     }
 
     // ----- VIDEO -----

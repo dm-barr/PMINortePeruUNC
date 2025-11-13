@@ -890,8 +890,9 @@ body {
 /* ========================================
    CARRUSEL DE JUNTA DIRECTIVA
 ======================================== */
+
 .seccion-junta {
-    padding: var(--spacing-2xl) 0;
+    padding: var(--spacing-2xl) 20px; 
     background: var(--color-light-bg);
 }
 
@@ -947,7 +948,7 @@ body {
 
 /* --- ESTILOS DE TARJETA OSCURA --- */
 .card-miembro {
-    background: var(--gradient-dark);
+    background: var(--gradient-dark); 
     border-radius: 25px;
     padding: 20px;
     color: var(--color-white);
@@ -986,7 +987,7 @@ body {
 
 .foto-miembro {
     width: 100%;
-    height: 350px;
+    height: 350px; 
     margin-bottom: var(--spacing-sm);
     border-radius: 15px;
     overflow: hidden;
@@ -2056,11 +2057,6 @@ body {
         max-width: 100%;
         min-width: 180px;
         padding: 20px;
-    }
-
-    .card-miembro img {
-        width: 120px;
-        height: 120px;
     }
 
     /* Filtros */
