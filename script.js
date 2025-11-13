@@ -3,14 +3,15 @@
 // ========================================
 document.addEventListener("DOMContentLoaded", function () {
 
-    // ----- CARRUSEL -----
+    // =====================================
+    // CARRUSEL DE JUNTA DIRECTIVA
+    // =====================================
     const track = document.getElementById('carouselTrack');
     const slides = document.querySelectorAll('.carousel-slide');
     const totalSlides = slides.length;
     let currentSlide = 0;
 
     if (track && slides.length > 0) {
-        // Crear indicadores
         const indicatorsContainer = document.getElementById('carouselIndicators');
         if (indicatorsContainer) {
             for (let i = 0; i < totalSlides; i++) {
@@ -38,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const offset = -currentSlide * 100;
             track.style.transform = `translateX(${offset}%)`;
 
-            // Actualizar indicadores
+            
             const indicators = document.querySelectorAll('.carousel-indicator');
             indicators.forEach((indicator, index) => {
                 indicator.classList.toggle('active', index === currentSlide);
@@ -48,8 +49,6 @@ document.addEventListener("DOMContentLoaded", function () {
         window.moveCarousel = moveCarousel;
         window.goToSlide = goToSlide;
 
-        // Auto-avance opcional (cada 5 segundos)
-        // setInterval(() => moveCarousel(1), 5000);
     }
 
     // ----- VIDEO -----
