@@ -888,82 +888,54 @@ body {
 
 
 /* ========================================
-   CARRUSEL DE JUNTA DIRECTIVA
+CARRUSEL JUNTA DIRECTIVA
 ======================================== */
-
 .seccion-junta {
     padding: var(--spacing-2xl) 20px; 
     background: var(--color-light-bg);
 }
 
-.carousel-container {
-    position: relative;
-    max-width: 1200px;
-    margin: 50px auto;
-    padding: 0 60px;
+.seccion-junta h2 {
+    text-align: left; 
 }
 
 .carousel-wrapper {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 70px;
+}
+
+.carousel-container {
     overflow: hidden;
-    border-radius: 20px;
+    position: relative;
 }
 
 .carousel-track {
     display: flex;
-    transition: transform 0.5s ease-in-out;
+    gap: var(--spacing-md); 
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* --- ESTILOS PARA LOS APARTADOS --- */
-.carousel-slide {
-    min-width: 100%;
-    padding: 30px 20px;
-    box-sizing: border-box;
-}
 
-.titulo-cargo {
-    font-size: 2rem;
-    font-weight: 700;
-    color: var(--color-primary); 
-    text-align: center;
-    margin-bottom: 30px;
-    position: relative;
-}
-
-.titulo-cargo::after {
-    content: '';
-    display: block;
-    width: 100px;
-    height: 3px;
-    background: var(--gradient-accent-highlight); 
-    margin: 10px auto 0;
-    border-radius: 2px;
-}
-
-.cards-junta {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-}
-
-/* --- ESTILOS DE TARJETA OSCURA --- */
+/* ========================================
+   ESTILOS DE TARJETA
+======================================== */
 .card-miembro {
-    background: var(--gradient-dark); 
+    background: var(--gradient-dark);
     border-radius: 25px;
     padding: 20px;
     color: var(--color-white);
-    text-align: center;
-    width: 100%;
-    max-width: 300px;
-    flex: 1;
-    min-width: 250px;
+    text-align: center; 
+    min-width: 320px;
+    flex: 0 0 320px; 
     box-shadow: var(--shadow-md);
     transition: var(--transition-base);
     position: relative;
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center; 
 }
 
 .card-miembro:hover {
@@ -981,13 +953,13 @@ body {
     margin-bottom: var(--spacing-sm);
     font-weight: 600;
     color: #FF610F;
-    text-align: center;
+    text-align: center; 
     white-space: nowrap;
 }
 
 .foto-miembro {
     width: 100%;
-    height: 350px; 
+    height: 400px;
     margin-bottom: var(--spacing-sm);
     border-radius: 15px;
     overflow: hidden;
@@ -1012,37 +984,38 @@ body {
     font-weight: 700;
     margin-bottom: var(--spacing-xs);
     color: var(--color-white);
-    text-align: center;
+    text-align: center; 
     min-height: 44px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-/* Descripción */
 .card-miembro .descripcion-cargo {
     font-size: 0.9rem;
-    color: var(--color-text-light); 
+    color: var(--color-text-light);
     line-height: 1.5;
     margin-top: 10px;
     padding: 0 10px;
-    margin-top: auto;
+    margin-top: auto; 
     padding-top: 10px;
-    min-height: 50px;
+    min-height: 50px; 
 }
 
-/* Botones del carrusel */
+/* ========================================
+   BOTONES Y PUNTOS DEL CARRUSEL
+======================================== */
 .carousel-btn {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: var(--gradient-primary);
-    color: var(--color-white);
-    border: none;
     width: 50px;
     height: 50px;
+    background: var(--gradient-morado-suave);
+    border: none;
     border-radius: 50%;
-    font-size: 1.5rem;
+    color: var(--color-white);
+    font-size: 1.2rem;
     cursor: pointer;
     z-index: 10;
     transition: var(--transition-base);
@@ -1050,44 +1023,110 @@ body {
 }
 
 .carousel-btn:hover {
-    background: var(--color-accent);
-    box-shadow: var(--shadow-naranja);
+    background: var(--gradient-naranja);
     transform: translateY(-50%) scale(1.1);
+    box-shadow: var(--shadow-naranja);
 }
 
-.carousel-btn.prev {
-    left: 0;
+.prev-btn {
+    left: 10px; 
 }
 
-.carousel-btn.next {
-    right: 0;
+.next-btn {
+    right: 10px;
 }
 
-/* Indicadores */
-.carousel-indicators {
+.carousel-dots {
     display: flex;
     justify-content: center;
-    gap: 10px;
-    margin-top: 30px;
+    gap: var(--spacing-xs);
+    margin-top: var(--spacing-xl);
 }
 
-.carousel-indicator {
+.carousel-dot {
     width: 12px;
     height: 12px;
     border-radius: 50%;
-    background: #ccc;
+    background: rgba(79, 23, 168, 0.3);
     cursor: pointer;
-    transition: var(--transition-fast);
+    transition: var(--transition-base);
 }
 
-.carousel-indicator.active {
-    background: var(--color-primary);
-    width: 30px;
-    border-radius: 6px;
+.carousel-dot.active {
+    background: var(--gradient-naranja); 
+    transform: scale(1.3);
 }
 
-.carousel-indicator:hover {
-    background: var(--color-accent);
+.carousel-dot:hover {
+    background: var(--gradient-morado-suave);
+    transform: scale(1.15);
+}
+
+/* ========================================
+   RESPONSIVE - JUNTA DIRECTIVA
+======================================== */
+
+@media (max-width: 768px) {
+    .carousel-wrapper {
+        padding: 0 50px;
+    }
+
+    .carousel-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+    
+    .prev-btn { left: 5px; }
+    .next-btn { right: 5px; }
+
+    .card-miembro {
+        min-width: 280px;
+        flex: 0 0 280px; 
+        padding: 18px;
+    }
+
+    .foto-miembro {
+        height: 350px;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-wrapper {
+        padding: 0 45px;
+    }
+
+    .carousel-btn {
+        width: 36px;
+        height: 36px;
+        font-size: 0.9rem;
+    }
+    
+    .prev-btn { left: 2px; }
+    .next-btn { right: 2px; }
+
+    .card-miembro {
+        min-width: 260px;
+        flex: 0 0 260px;
+        padding: 15px;
+    }
+
+    .foto-miembro {
+        height: 320px;
+    }
+
+    .cargo-badge {
+        font-size: 0.8em;
+        padding: 5px 12px;
+    }
+
+    .card-miembro h3 {
+        font-size: 1em;
+    }
+
+    .card-miembro .descripcion-cargo {
+        font-size: 0.85em;
+    }
 }
 
 /* ========================================

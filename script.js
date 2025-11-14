@@ -3,48 +3,143 @@
 // ========================================
 document.addEventListener("DOMContentLoaded", function () {
 
-    // =====================================
+// =====================================
     // CARRUSEL DE JUNTA DIRECTIVA
     // =====================================
-    const track = document.getElementById('carouselTrack');
-    const slides = document.querySelectorAll('.carousel-slide');
-    const totalSlides = slides.length;
-    let currentSlide = 0;
+    const track = document.querySelector(".carousel-track");
+    const nextBtn = document.querySelector(".next-btn");
+    const prevBtn = document.querySelector(".prev-btn");
+    const dotsContainer = document.querySelector(".carousel-dots");
 
-    if (track && slides.length > 0) {
-        const indicatorsContainer = document.getElementById('carouselIndicators');
-        if (indicatorsContainer) {
-            for (let i = 0; i < totalSlides; i++) {
-                const indicator = document.createElement('div');
-                indicator.classList.add('carousel-indicator');
-                if (i === 0) indicator.classList.add('active');
-                indicator.onclick = () => goToSlide(i);
-                indicatorsContainer.appendChild(indicator);
+    if (track && nextBtn && prevBtn && dotsContainer) {
+        const slides = Array.from(track.children);
+        let currentSlide = 0;
+
+        function getSlidesPerView() {
+            const width = window.innerWidth;
+            if (width >= 1024) return 3;
+            if (width >= 768) return 2;
+            return 1;
+        }
+
+        let slidesPerView = getSlidesPerView();
+        const totalSlides = slides.length;
+        function getTotalDots() {
+            if (totalSlides === 0 || slidesPerView === 0) return 0;
+            return Math.ceil(totalSlides / slidesPerView);
+        }
+
+        let totalDots = getTotalDots();
+
+        function createDots() {
+            dotsContainer.innerHTML = "";
+            totalDots = getTotalDots();
+            if (totalDots <= 1) return; 
+            for (let i = 0; i < totalDots; i++) {
+                const dot = document.createElement("div");
+                dot.classList.add("carousel-dot");
+                if (i === 0) dot.classList.add("active");
+                dotsContainer.appendChild(dot);
             }
         }
 
-        function moveCarousel(direction) {
-            currentSlide += direction;
-            if (currentSlide < 0) currentSlide = totalSlides - 1;
-            else if (currentSlide >= totalSlides) currentSlide = 0;
-            updateCarousel();
-        }
-
-        function goToSlide(index) {
-            currentSlide = index;
-            updateCarousel();
-        }
+        createDots();
+        const getDots = () => Array.from(dotsContainer.children);
 
         function updateCarousel() {
-            const offset = -currentSlide * 100;
-            track.style.transform = `translateX(${offset}%)`;
-            const indicators = document.querySelectorAll('.carousel-indicator');
-            indicators.forEach((indicator, index) => {
-                indicator.classList.toggle('active', index === currentSlide);
+            if (slides.length === 0) return; 
+            const slideWidth = slides[0].getBoundingClientRect().width;
+            const gap = 30; 
+            const moveAmount = -(currentSlide * (slideWidth + gap));
+            track.style.transform = `translateX(${moveAmount}px)`;
+            const activeDotIndex = Math.floor(currentSlide / slidesPerView);
+            const safeActiveDotIndex = Math.max(0, Math.min(getDots().length - 1, activeDotIndex));
+
+            getDots().forEach((dot, index) => {
+                dot.classList.toggle("active", index === safeActiveDotIndex);
             });
         }
-        window.moveCarousel = moveCarousel;
-        window.goToSlide = goToSlide;
+        
+        function checkSlideBounds() {
+            if (totalSlides === 0 || slidesPerView === 0) return; 
+            const maxSlide = Math.max(0, totalSlides - slidesPerView);
+            if (currentSlide > maxSlide) {
+                currentSlide = maxSlide;
+            }
+            if (currentSlide < 0) {
+                currentSlide = 0;
+            }
+        }
+
+        nextBtn.addEventListener("click", () => {
+            if (totalSlides === 0 || slidesPerView === 0) return;
+            const maxSlide = totalSlides - slidesPerView;
+            if (currentSlide < maxSlide) {
+                currentSlide++;
+            } else {
+                currentSlide = 0; 
+            }
+            updateCarousel();
+        });
+
+        prevBtn.addEventListener("click", () => {
+            if (totalSlides === 0 || slidesPerView === 0) return;
+            const maxSlide = totalSlides - slidesPerView;
+            if (currentSlide > 0) {
+                currentSlide--;
+            } else {
+                currentSlide = maxSlide; 
+            }
+            updateCarousel();
+        });
+
+        dotsContainer.addEventListener("click", (e) => {
+            if (e.target.classList.contains("carousel-dot")) {
+                const index = getDots().indexOf(e.target);
+                if (index !== -1) {
+                    currentSlide = index * slidesPerView;
+                    checkSlideBounds(); 
+                    updateCarousel();
+                }
+            }
+        });
+
+        window.addEventListener("resize", () => {
+            const oldSlidesPerView = slidesPerView;
+            slidesPerView = getSlidesPerView();
+            if (oldSlidesPerView !== slidesPerView) {
+                currentSlide = 0; 
+                createDots();
+            }
+            checkSlideBounds(); 
+            updateCarousel();
+        });
+
+        let startX = 0;
+        let isDragging = false;
+        track.addEventListener("touchstart", (e) => {
+            startX = e.touches[0].clientX;
+            isDragging = true;
+        });
+
+        track.addEventListener("touchend", (e) => {
+            if (!isDragging) return;
+            const endX = e.changedTouches[0].clientX;
+            const diff = startX - endX;
+            if (Math.abs(diff) > 50) { 
+                if (totalSlides === 0 || slidesPerView === 0) return;
+                const maxSlide = totalSlides - slidesPerView;
+                if (diff > 0 && currentSlide < maxSlide) { 
+                    currentSlide++;
+                } else if (diff < 0 && currentSlide > 0) {
+                    currentSlide--;
+                }
+                updateCarousel();
+            }
+            isDragging = false;
+        });
+        checkSlideBounds();
+        updateCarousel();
     }
 
     // ----- VIDEO -----
